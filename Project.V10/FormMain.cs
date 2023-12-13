@@ -16,5 +16,13 @@ namespace Project.V10
         {
             InitializeComponent();
         }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            Button buttonGoToOrder = new Button();
+            buttonGoToOrder.BackColor = SystemColors.Control;
+            buttonGoToOrder.Location = new Point(700, 300);
+            this.Controls.Add(buttonGoToOrder);
+        }
     }
 }
