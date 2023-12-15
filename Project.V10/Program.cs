@@ -16,7 +16,7 @@ namespace Project.V10
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMain());
+            Application.Run(new FormMain_SSV());
         }
     }
 }
