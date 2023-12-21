@@ -117,8 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="7XnkBGmKW4k4EFWs7372cA" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\7XnkBGmKW4k4EFWs7372cA.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="labelInfo_SSV.Text" xml:space="preserve">
+    <value>Разработчик: Сбродов.С.В
+Группа: АСОиУб-23-2
+
+Программа разработана в рамках изучения языка C#
+
+Тюменский Индустриальный Университет (с) 2023
+Высшая Школа Цифровых Технологий (с) 2023
+
+Внутреннее имя: Tyuiu.SbrodovSV.Sprint7.Project.V10</value>
   </data>
 </root>
