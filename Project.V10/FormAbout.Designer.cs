@@ -47,7 +47,7 @@
             // 
             // pictureBoxAvatar_SSV
             // 
-            this.pictureBoxAvatar_SSV.Image = global::Project.V10.Properties.Resources._7XnkBGmKW4k4EFWs7372cA;
+            this.pictureBoxAvatar_SSV.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxAvatar_SSV.Image")));
             this.pictureBoxAvatar_SSV.Location = new System.Drawing.Point(12, 39);
             this.pictureBoxAvatar_SSV.Name = "pictureBoxAvatar_SSV";
             this.pictureBoxAvatar_SSV.Size = new System.Drawing.Size(117, 78);

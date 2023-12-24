@@ -59,6 +59,7 @@
             this.buttonAddOrders_SSV = new System.Windows.Forms.Button();
             this.buttonDownloadOrders_SSV = new System.Windows.Forms.Button();
             this.tabControl_SSV = new System.Windows.Forms.TabControl();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.menuStrip_SSV.SuspendLayout();
             this.tabPageOrderData_SSV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTableOrders_SSV)).BeginInit();
@@ -78,7 +79,7 @@
             this.toolStripMenuItemExit_SSV});
             this.menuStrip_SSV.Location = new System.Drawing.Point(0, 0);
             this.menuStrip_SSV.Name = "menuStrip_SSV";
-            this.menuStrip_SSV.Size = new System.Drawing.Size(921, 24);
+            this.menuStrip_SSV.Size = new System.Drawing.Size(1093, 24);
             this.menuStrip_SSV.TabIndex = 4;
             this.menuStrip_SSV.Text = "menuStrip1";
             // 
@@ -146,7 +147,7 @@
             // 
             this.tabPageStats_SSV.Location = new System.Drawing.Point(4, 22);
             this.tabPageStats_SSV.Name = "tabPageStats_SSV";
-            this.tabPageStats_SSV.Size = new System.Drawing.Size(913, 357);
+            this.tabPageStats_SSV.Size = new System.Drawing.Size(1085, 525);
             this.tabPageStats_SSV.TabIndex = 2;
             this.tabPageStats_SSV.Text = "Статистика";
             this.tabPageStats_SSV.UseVisualStyleBackColor = true;
@@ -158,7 +159,7 @@
             this.tabPageOrderData_SSV.Location = new System.Drawing.Point(4, 22);
             this.tabPageOrderData_SSV.Name = "tabPageOrderData_SSV";
             this.tabPageOrderData_SSV.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageOrderData_SSV.Size = new System.Drawing.Size(913, 357);
+            this.tabPageOrderData_SSV.Size = new System.Drawing.Size(1085, 525);
             this.tabPageOrderData_SSV.TabIndex = 1;
             this.tabPageOrderData_SSV.Text = "База данных по заказам";
             this.tabPageOrderData_SSV.UseVisualStyleBackColor = true;
@@ -181,7 +182,7 @@
             this.dataGridViewTableOrders_SSV.Name = "dataGridViewTableOrders_SSV";
             this.dataGridViewTableOrders_SSV.RowHeadersWidth = 51;
             this.dataGridViewTableOrders_SSV.RowTemplate.Height = 24;
-            this.dataGridViewTableOrders_SSV.Size = new System.Drawing.Size(727, 351);
+            this.dataGridViewTableOrders_SSV.Size = new System.Drawing.Size(899, 519);
             this.dataGridViewTableOrders_SSV.TabIndex = 1;
             this.dataGridViewTableOrders_SSV.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dataGridViewTable_SSV_RowPrePaint);
             // 
@@ -225,6 +226,7 @@
             // groupBoxMovesOrders_SSV
             // 
             this.groupBoxMovesOrders_SSV.BackColor = System.Drawing.SystemColors.Menu;
+            this.groupBoxMovesOrders_SSV.Controls.Add(this.comboBox1);
             this.groupBoxMovesOrders_SSV.Controls.Add(this.label1);
             this.groupBoxMovesOrders_SSV.Controls.Add(this.textBox1);
             this.groupBoxMovesOrders_SSV.Controls.Add(this.textBoxSearch_SSV);
@@ -239,7 +241,7 @@
             this.groupBoxMovesOrders_SSV.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxMovesOrders_SSV.Name = "groupBoxMovesOrders_SSV";
             this.groupBoxMovesOrders_SSV.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBoxMovesOrders_SSV.Size = new System.Drawing.Size(180, 351);
+            this.groupBoxMovesOrders_SSV.Size = new System.Drawing.Size(180, 519);
             this.groupBoxMovesOrders_SSV.TabIndex = 4;
             this.groupBoxMovesOrders_SSV.TabStop = false;
             this.groupBoxMovesOrders_SSV.Text = "Действия";
@@ -247,7 +249,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 186);
+            this.label1.Location = new System.Drawing.Point(3, 197);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(148, 13);
             this.label1.TabIndex = 2;
@@ -255,14 +257,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(3, 285);
+            this.textBox1.Location = new System.Drawing.Point(5, 334);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(168, 20);
             this.textBox1.TabIndex = 1;
             // 
             // textBoxSearch_SSV
             // 
-            this.textBoxSearch_SSV.Location = new System.Drawing.Point(4, 202);
+            this.textBoxSearch_SSV.Location = new System.Drawing.Point(4, 213);
             this.textBoxSearch_SSV.Name = "textBoxSearch_SSV";
             this.textBoxSearch_SSV.Size = new System.Drawing.Size(169, 20);
             this.textBoxSearch_SSV.TabIndex = 1;
@@ -283,7 +285,7 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(3, 308);
+            this.button1.Location = new System.Drawing.Point(5, 146);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(170, 39);
@@ -295,7 +297,7 @@
             // buttonSearch_SSV
             // 
             this.buttonSearch_SSV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSearch_SSV.Location = new System.Drawing.Point(3, 227);
+            this.buttonSearch_SSV.Location = new System.Drawing.Point(5, 360);
             this.buttonSearch_SSV.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSearch_SSV.Name = "buttonSearch_SSV";
             this.buttonSearch_SSV.Size = new System.Drawing.Size(170, 39);
@@ -307,7 +309,7 @@
             // buttonRemoveRows_SSV
             // 
             this.buttonRemoveRows_SSV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRemoveRows_SSV.Location = new System.Drawing.Point(4, 146);
+            this.buttonRemoveRows_SSV.Location = new System.Drawing.Point(4, 238);
             this.buttonRemoveRows_SSV.Margin = new System.Windows.Forms.Padding(2);
             this.buttonRemoveRows_SSV.Name = "buttonRemoveRows_SSV";
             this.buttonRemoveRows_SSV.Size = new System.Drawing.Size(170, 39);
@@ -348,14 +350,31 @@
             this.tabControl_SSV.Location = new System.Drawing.Point(0, 24);
             this.tabControl_SSV.Name = "tabControl_SSV";
             this.tabControl_SSV.SelectedIndex = 0;
-            this.tabControl_SSV.Size = new System.Drawing.Size(921, 383);
+            this.tabControl_SSV.Size = new System.Drawing.Size(1093, 551);
             this.tabControl_SSV.TabIndex = 3;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "",
+            "Номер заказа",
+            "Дата исполнения",
+            "Стоимость заказа",
+            "Название товара",
+            "Цена товара",
+            "Количество товаров"});
+            this.comboBox1.Location = new System.Drawing.Point(6, 307);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(167, 21);
+            this.comboBox1.TabIndex = 3;
             // 
             // FormMain_SSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(921, 407);
+            this.ClientSize = new System.Drawing.Size(1093, 575);
             this.Controls.Add(this.tabControl_SSV);
             this.Controls.Add(this.menuStrip_SSV);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -406,6 +425,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

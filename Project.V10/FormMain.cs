@@ -124,10 +124,19 @@ namespace Project.V10
 
         private void button1_Click(object sender, EventArgs e)
         {
-            BindingSource bs = new BindingSource();
-            bs.DataSource = dataGridViewTableOrders_SSV.DataSource;
-            bs.Filter = dataGridViewTableOrders_SSV.Columns[5].HeaderText.ToString() + " LIKE '%" + textBox1.Text + "%'";
-            dataGridViewTableOrders_SSV.DataSource = bs;
+            foreach (DataGridViewRow r in dataGridViewTableOrders_SSV.Rows)
+            {
+                if ((r.Cells[5].Value).ToString().ToUpper().Contains(textBox1.Text.ToUpper()))
+                {
+                    dataGridViewTableOrders_SSV.Rows[r.Index].Visible = true;
+                    dataGridViewTableOrders_SSV.Rows[r.Index].Selected = true;
+                }
+                else
+                {
+                    dataGridViewTableOrders_SSV.CurrentCell = null;
+                    dataGridViewTableOrders_SSV.Rows[r.Index].Visible = false;
+                }
+            }
         }
 
         private void textBoxSearch_SSV_TextChanged(object sender, EventArgs e)
