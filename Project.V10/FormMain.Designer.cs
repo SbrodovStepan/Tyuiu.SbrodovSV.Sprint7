@@ -50,16 +50,16 @@
             this.Quantity_SSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxMovesOrders_SSV = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxFilter_SSV = new System.Windows.Forms.TextBox();
             this.textBoxSearch_SSV = new System.Windows.Forms.TextBox();
             this.buttonOpenOrder_SSV = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.buttonSearch_SSV = new System.Windows.Forms.Button();
             this.buttonRemoveRows_SSV = new System.Windows.Forms.Button();
+            this.buttonSearch_SSV = new System.Windows.Forms.Button();
+            this.buttonFilter_SSV = new System.Windows.Forms.Button();
             this.buttonAddOrders_SSV = new System.Windows.Forms.Button();
             this.buttonDownloadOrders_SSV = new System.Windows.Forms.Button();
             this.tabControl_SSV = new System.Windows.Forms.TabControl();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxColsNames_SSV = new System.Windows.Forms.ComboBox();
             this.menuStrip_SSV.SuspendLayout();
             this.tabPageOrderData_SSV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTableOrders_SSV)).BeginInit();
@@ -226,14 +226,14 @@
             // groupBoxMovesOrders_SSV
             // 
             this.groupBoxMovesOrders_SSV.BackColor = System.Drawing.SystemColors.Menu;
-            this.groupBoxMovesOrders_SSV.Controls.Add(this.comboBox1);
+            this.groupBoxMovesOrders_SSV.Controls.Add(this.comboBoxColsNames_SSV);
             this.groupBoxMovesOrders_SSV.Controls.Add(this.label1);
-            this.groupBoxMovesOrders_SSV.Controls.Add(this.textBox1);
+            this.groupBoxMovesOrders_SSV.Controls.Add(this.textBoxFilter_SSV);
             this.groupBoxMovesOrders_SSV.Controls.Add(this.textBoxSearch_SSV);
             this.groupBoxMovesOrders_SSV.Controls.Add(this.buttonOpenOrder_SSV);
-            this.groupBoxMovesOrders_SSV.Controls.Add(this.button1);
-            this.groupBoxMovesOrders_SSV.Controls.Add(this.buttonSearch_SSV);
             this.groupBoxMovesOrders_SSV.Controls.Add(this.buttonRemoveRows_SSV);
+            this.groupBoxMovesOrders_SSV.Controls.Add(this.buttonSearch_SSV);
+            this.groupBoxMovesOrders_SSV.Controls.Add(this.buttonFilter_SSV);
             this.groupBoxMovesOrders_SSV.Controls.Add(this.buttonAddOrders_SSV);
             this.groupBoxMovesOrders_SSV.Controls.Add(this.buttonDownloadOrders_SSV);
             this.groupBoxMovesOrders_SSV.Dock = System.Windows.Forms.DockStyle.Left;
@@ -255,18 +255,19 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Введите объект для поиска\r\n";
             // 
-            // textBox1
+            // textBoxFilter_SSV
             // 
-            this.textBox1.Location = new System.Drawing.Point(5, 334);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(168, 20);
-            this.textBox1.TabIndex = 1;
+            this.textBoxFilter_SSV.Enabled = false;
+            this.textBoxFilter_SSV.Location = new System.Drawing.Point(6, 334);
+            this.textBoxFilter_SSV.Name = "textBoxFilter_SSV";
+            this.textBoxFilter_SSV.Size = new System.Drawing.Size(168, 20);
+            this.textBoxFilter_SSV.TabIndex = 1;
             // 
             // textBoxSearch_SSV
             // 
-            this.textBoxSearch_SSV.Location = new System.Drawing.Point(4, 213);
+            this.textBoxSearch_SSV.Location = new System.Drawing.Point(5, 213);
             this.textBoxSearch_SSV.Name = "textBoxSearch_SSV";
-            this.textBoxSearch_SSV.Size = new System.Drawing.Size(169, 20);
+            this.textBoxSearch_SSV.Size = new System.Drawing.Size(168, 20);
             this.textBoxSearch_SSV.TabIndex = 1;
             this.textBoxSearch_SSV.TextChanged += new System.EventHandler(this.textBoxSearch_SSV_TextChanged);
             // 
@@ -282,22 +283,23 @@
             this.buttonOpenOrder_SSV.UseVisualStyleBackColor = true;
             this.buttonOpenOrder_SSV.Click += new System.EventHandler(this.buttonOpen_SSV_Click);
             // 
-            // button1
+            // buttonRemoveRows_SSV
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(5, 146);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(170, 39);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Удалить заказ";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonRemoveRows_SSV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRemoveRows_SSV.Enabled = false;
+            this.buttonRemoveRows_SSV.Location = new System.Drawing.Point(4, 146);
+            this.buttonRemoveRows_SSV.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonRemoveRows_SSV.Name = "buttonRemoveRows_SSV";
+            this.buttonRemoveRows_SSV.Size = new System.Drawing.Size(170, 39);
+            this.buttonRemoveRows_SSV.TabIndex = 0;
+            this.buttonRemoveRows_SSV.Text = "Удалить заказ";
+            this.buttonRemoveRows_SSV.UseVisualStyleBackColor = true;
+            this.buttonRemoveRows_SSV.Click += new System.EventHandler(this.buttonRemoveRows_SSV_Click);
             // 
             // buttonSearch_SSV
             // 
             this.buttonSearch_SSV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSearch_SSV.Location = new System.Drawing.Point(5, 360);
+            this.buttonSearch_SSV.Location = new System.Drawing.Point(4, 238);
             this.buttonSearch_SSV.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSearch_SSV.Name = "buttonSearch_SSV";
             this.buttonSearch_SSV.Size = new System.Drawing.Size(170, 39);
@@ -306,17 +308,18 @@
             this.buttonSearch_SSV.UseVisualStyleBackColor = true;
             this.buttonSearch_SSV.Click += new System.EventHandler(this.buttonSearch_SSV_Click);
             // 
-            // buttonRemoveRows_SSV
+            // buttonFilter_SSV
             // 
-            this.buttonRemoveRows_SSV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRemoveRows_SSV.Location = new System.Drawing.Point(4, 238);
-            this.buttonRemoveRows_SSV.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonRemoveRows_SSV.Name = "buttonRemoveRows_SSV";
-            this.buttonRemoveRows_SSV.Size = new System.Drawing.Size(170, 39);
-            this.buttonRemoveRows_SSV.TabIndex = 0;
-            this.buttonRemoveRows_SSV.Text = "Удалить заказ";
-            this.buttonRemoveRows_SSV.UseVisualStyleBackColor = true;
-            this.buttonRemoveRows_SSV.Click += new System.EventHandler(this.buttonRemoveRows_SSV_Click);
+            this.buttonFilter_SSV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonFilter_SSV.Enabled = false;
+            this.buttonFilter_SSV.Location = new System.Drawing.Point(4, 359);
+            this.buttonFilter_SSV.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonFilter_SSV.Name = "buttonFilter_SSV";
+            this.buttonFilter_SSV.Size = new System.Drawing.Size(170, 39);
+            this.buttonFilter_SSV.TabIndex = 0;
+            this.buttonFilter_SSV.Text = "Отфильтровать";
+            this.buttonFilter_SSV.UseVisualStyleBackColor = true;
+            this.buttonFilter_SSV.Click += new System.EventHandler(this.buttonFilter_SSV_Click);
             // 
             // buttonAddOrders_SSV
             // 
@@ -353,11 +356,11 @@
             this.tabControl_SSV.Size = new System.Drawing.Size(1093, 551);
             this.tabControl_SSV.TabIndex = 3;
             // 
-            // comboBox1
+            // comboBoxColsNames_SSV
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxColsNames_SSV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxColsNames_SSV.FormattingEnabled = true;
+            this.comboBoxColsNames_SSV.Items.AddRange(new object[] {
             "",
             "Номер заказа",
             "Дата исполнения",
@@ -365,10 +368,11 @@
             "Название товара",
             "Цена товара",
             "Количество товаров"});
-            this.comboBox1.Location = new System.Drawing.Point(6, 307);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(167, 21);
-            this.comboBox1.TabIndex = 3;
+            this.comboBoxColsNames_SSV.Location = new System.Drawing.Point(6, 307);
+            this.comboBoxColsNames_SSV.Name = "comboBoxColsNames_SSV";
+            this.comboBoxColsNames_SSV.Size = new System.Drawing.Size(167, 21);
+            this.comboBoxColsNames_SSV.TabIndex = 3;
+            this.comboBoxColsNames_SSV.SelectedIndexChanged += new System.EventHandler(this.comboBoxColsNames_SSV_SelectedIndexChanged);
             // 
             // FormMain_SSV
             // 
@@ -419,13 +423,13 @@
         private System.Windows.Forms.Button buttonAddOrders_SSV;
         private System.Windows.Forms.Button buttonDownloadOrders_SSV;
         private System.Windows.Forms.TabControl tabControl_SSV;
-        private System.Windows.Forms.Button buttonRemoveRows_SSV;
+        private System.Windows.Forms.Button buttonFilter_SSV;
         private System.Windows.Forms.TextBox textBoxSearch_SSV;
         private System.Windows.Forms.Button buttonSearch_SSV;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBoxFilter_SSV;
+        private System.Windows.Forms.Button buttonRemoveRows_SSV;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxColsNames_SSV;
     }
 }
 

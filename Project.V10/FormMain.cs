@@ -44,6 +44,7 @@ namespace Project.V10
                     dataGridViewTableOrders_SSV.Rows[i].Cells[j].Value = arrayValues[i, j];
                 }
             }
+            if (dataGridViewTableOrders_SSV.Rows.Count != 0) { buttonRemoveRows_SSV.Enabled = true; }
         }
 
         private void buttonDownload_SSV_Click(object sender, EventArgs e)
@@ -88,6 +89,7 @@ namespace Project.V10
         private void buttonAdd_SSV_Click(object sender, EventArgs e)
         {
             dataGridViewTableOrders_SSV.Rows.Add();
+            buttonRemoveRows_SSV.Enabled = true;
         }
 
         private void buttonInfo_SSV_Click(object sender, EventArgs e)
@@ -105,6 +107,7 @@ namespace Project.V10
         {
             int ind = dataGridViewTableOrders_SSV.SelectedCells[0].RowIndex;
             dataGridViewTableOrders_SSV.Rows.RemoveAt(ind);
+            if (dataGridViewTableOrders_SSV.Rows.Count == 0) { buttonRemoveRows_SSV.Enabled = false; }
         }
 
         private void buttonSearch_SSV_Click(object sender, EventArgs e)
@@ -122,11 +125,11 @@ namespace Project.V10
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonFilter_SSV_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow r in dataGridViewTableOrders_SSV.Rows)
             {
-                if ((r.Cells[5].Value).ToString().ToUpper().Contains(textBox1.Text.ToUpper()))
+                if ((r.Cells[comboBoxColsNames_SSV.SelectedIndex].Value).ToString().ToUpper().Contains(textBoxFilter_SSV.Text.ToUpper()))
                 {
                     dataGridViewTableOrders_SSV.Rows[r.Index].Visible = true;
                     dataGridViewTableOrders_SSV.Rows[r.Index].Selected = true;
@@ -142,6 +145,20 @@ namespace Project.V10
         private void textBoxSearch_SSV_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBoxColsNames_SSV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxColsNames_SSV.SelectedIndex != 0)
+            {
+                textBoxFilter_SSV.Enabled = true;
+                buttonFilter_SSV.Enabled = true;
+            }
+            else
+            {
+                textBoxFilter_SSV.Enabled = false;
+                buttonFilter_SSV.Enabled = false;
+            }
         }
 
         private void dataGridViewTable_SSV_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
