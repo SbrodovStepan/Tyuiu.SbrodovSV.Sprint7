@@ -1,6 +1,6 @@
 ﻿namespace Project.V10
 {
-    partial class FormClients
+    partial class FormClients_SSV
     {
         /// <summary>
         /// Required designer variable.
@@ -42,6 +42,11 @@
             this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.menuStrip_SSV = new System.Windows.Forms.MenuStrip();
+            this.toolStripMenuItemInfo_SSV = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemInstruction_SSV = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemAbout_SSV = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemExit_SSV = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -49,11 +54,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
+            this.menuStrip_SSV.SuspendLayout();
             this.SuspendLayout();
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(490, 129);
+            this.numericUpDown1.Location = new System.Drawing.Point(500, 107);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(29, 20);
             this.numericUpDown1.TabIndex = 1;
@@ -61,7 +67,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(404, 130);
+            this.checkBox1.Location = new System.Drawing.Point(414, 108);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(80, 17);
             this.checkBox1.TabIndex = 2;
@@ -70,7 +76,7 @@
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(490, 152);
+            this.numericUpDown2.Location = new System.Drawing.Point(500, 130);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(29, 20);
             this.numericUpDown2.TabIndex = 1;
@@ -78,7 +84,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(404, 153);
+            this.checkBox2.Location = new System.Drawing.Point(414, 131);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(80, 17);
             this.checkBox2.TabIndex = 2;
@@ -87,7 +93,7 @@
             // 
             // numericUpDown3
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(490, 175);
+            this.numericUpDown3.Location = new System.Drawing.Point(500, 153);
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(29, 20);
             this.numericUpDown3.TabIndex = 1;
@@ -95,7 +101,7 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(404, 176);
+            this.checkBox3.Location = new System.Drawing.Point(414, 154);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(80, 17);
             this.checkBox3.TabIndex = 2;
@@ -104,7 +110,7 @@
             // 
             // numericUpDown4
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(490, 198);
+            this.numericUpDown4.Location = new System.Drawing.Point(500, 176);
             this.numericUpDown4.Name = "numericUpDown4";
             this.numericUpDown4.Size = new System.Drawing.Size(29, 20);
             this.numericUpDown4.TabIndex = 1;
@@ -112,7 +118,7 @@
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(404, 199);
+            this.checkBox4.Location = new System.Drawing.Point(414, 177);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(80, 17);
             this.checkBox4.TabIndex = 2;
@@ -121,7 +127,7 @@
             // 
             // numericUpDown5
             // 
-            this.numericUpDown5.Location = new System.Drawing.Point(490, 221);
+            this.numericUpDown5.Location = new System.Drawing.Point(500, 199);
             this.numericUpDown5.Name = "numericUpDown5";
             this.numericUpDown5.Size = new System.Drawing.Size(29, 20);
             this.numericUpDown5.TabIndex = 1;
@@ -129,7 +135,7 @@
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(404, 222);
+            this.checkBox5.Location = new System.Drawing.Point(414, 200);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(80, 17);
             this.checkBox5.TabIndex = 2;
@@ -138,7 +144,7 @@
             // 
             // numericUpDown6
             // 
-            this.numericUpDown6.Location = new System.Drawing.Point(490, 244);
+            this.numericUpDown6.Location = new System.Drawing.Point(500, 222);
             this.numericUpDown6.Name = "numericUpDown6";
             this.numericUpDown6.Size = new System.Drawing.Size(29, 20);
             this.numericUpDown6.TabIndex = 1;
@@ -146,7 +152,7 @@
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(404, 245);
+            this.checkBox6.Location = new System.Drawing.Point(414, 223);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(80, 17);
             this.checkBox6.TabIndex = 2;
@@ -155,7 +161,7 @@
             // 
             // numericUpDown7
             // 
-            this.numericUpDown7.Location = new System.Drawing.Point(490, 267);
+            this.numericUpDown7.Location = new System.Drawing.Point(500, 245);
             this.numericUpDown7.Name = "numericUpDown7";
             this.numericUpDown7.Size = new System.Drawing.Size(29, 20);
             this.numericUpDown7.TabIndex = 1;
@@ -163,18 +169,60 @@
             // checkBox7
             // 
             this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(404, 268);
+            this.checkBox7.Location = new System.Drawing.Point(414, 246);
             this.checkBox7.Name = "checkBox7";
             this.checkBox7.Size = new System.Drawing.Size(80, 17);
             this.checkBox7.TabIndex = 2;
             this.checkBox7.Text = "checkBox1";
             this.checkBox7.UseVisualStyleBackColor = true;
             // 
-            // FormClients
+            // menuStrip_SSV
+            // 
+            this.menuStrip_SSV.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemInfo_SSV,
+            this.toolStripMenuItemExit_SSV});
+            this.menuStrip_SSV.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip_SSV.Name = "menuStrip_SSV";
+            this.menuStrip_SSV.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip_SSV.TabIndex = 6;
+            this.menuStrip_SSV.Text = "menuStrip1";
+            // 
+            // toolStripMenuItemInfo_SSV
+            // 
+            this.toolStripMenuItemInfo_SSV.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemInstruction_SSV,
+            this.toolStripMenuItemAbout_SSV});
+            this.toolStripMenuItemInfo_SSV.Name = "toolStripMenuItemInfo_SSV";
+            this.toolStripMenuItemInfo_SSV.Size = new System.Drawing.Size(65, 20);
+            this.toolStripMenuItemInfo_SSV.Text = "Справка";
+            // 
+            // toolStripMenuItemInstruction_SSV
+            // 
+            this.toolStripMenuItemInstruction_SSV.Name = "toolStripMenuItemInstruction_SSV";
+            this.toolStripMenuItemInstruction_SSV.Size = new System.Drawing.Size(268, 22);
+            this.toolStripMenuItemInstruction_SSV.Text = "Краткое руководство пользователя";
+            this.toolStripMenuItemInstruction_SSV.Click += new System.EventHandler(this.toolStripMenuItemInstruction_SSV_Click);
+            // 
+            // toolStripMenuItemAbout_SSV
+            // 
+            this.toolStripMenuItemAbout_SSV.Name = "toolStripMenuItemAbout_SSV";
+            this.toolStripMenuItemAbout_SSV.Size = new System.Drawing.Size(268, 22);
+            this.toolStripMenuItemAbout_SSV.Text = "О программе ";
+            this.toolStripMenuItemAbout_SSV.Click += new System.EventHandler(this.toolStripMenuItemAbout_SSV_Click);
+            // 
+            // toolStripMenuItemExit_SSV
+            // 
+            this.toolStripMenuItemExit_SSV.Name = "toolStripMenuItemExit_SSV";
+            this.toolStripMenuItemExit_SSV.Size = new System.Drawing.Size(54, 20);
+            this.toolStripMenuItemExit_SSV.Text = "Выход";
+            this.toolStripMenuItemExit_SSV.Click += new System.EventHandler(this.toolStripMenuItemExit_SSV_Click);
+            // 
+            // FormClients_SSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.menuStrip_SSV);
             this.Controls.Add(this.checkBox7);
             this.Controls.Add(this.numericUpDown7);
             this.Controls.Add(this.checkBox6);
@@ -189,7 +237,8 @@
             this.Controls.Add(this.numericUpDown2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.numericUpDown1);
-            this.Name = "FormClients";
+            this.Name = "FormClients_SSV";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormClients";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
@@ -198,6 +247,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
+            this.menuStrip_SSV.ResumeLayout(false);
+            this.menuStrip_SSV.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,5 +270,10 @@
         private System.Windows.Forms.CheckBox checkBox6;
         private System.Windows.Forms.NumericUpDown numericUpDown7;
         private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.MenuStrip menuStrip_SSV;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemInfo_SSV;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemInstruction_SSV;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemAbout_SSV;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemExit_SSV;
     }
 }

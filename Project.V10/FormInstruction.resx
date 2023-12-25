@@ -117,7 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="menuStrip_SSV.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Программа предназначена для работы небольшого магазина.
+По открытию программы вам предлагают авторизоваться либо, как работник, либо, как заказчик.
+
+*Авторизация в качестве работника*
+
+Вам предлагается работа с базой данных:
+-Открытие
+-Создание
+-Сохранение
+-Поиск
+-Фильтрация
+-Редактирование
+
+А также просмотр статистики:
+-Самый популярный товар
+-Выручка с продаж магазина</value>
+  </data>
 </root>
