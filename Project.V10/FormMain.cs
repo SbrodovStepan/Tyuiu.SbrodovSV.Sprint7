@@ -129,7 +129,7 @@ namespace Project.V10
         {
             foreach (DataGridViewRow r in dataGridViewTableOrders_SSV.Rows)
             {
-                if ((r.Cells[comboBoxColsNames_SSV.SelectedIndex].Value).ToString().ToUpper().Contains(textBoxFilter_SSV.Text.ToUpper()))
+                if ((r.Cells[comboBoxColsNames_SSV.SelectedIndex - 1].Value).ToString().ToUpper().Contains(textBoxFilter_SSV.Text.ToUpper()))
                 {
                     dataGridViewTableOrders_SSV.Rows[r.Index].Visible = true;
                     dataGridViewTableOrders_SSV.Rows[r.Index].Selected = true;

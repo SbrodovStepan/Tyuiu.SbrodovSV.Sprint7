@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.saveFileDialogTable_SSV = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialogTable_SSV = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip_SSV = new System.Windows.Forms.MenuStrip();
@@ -49,7 +52,8 @@
             this.Price_SSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity_SSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxMovesOrders_SSV = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.comboBoxColsNames_SSV = new System.Windows.Forms.ComboBox();
+            this.labelSearch_SSV = new System.Windows.Forms.Label();
             this.textBoxFilter_SSV = new System.Windows.Forms.TextBox();
             this.textBoxSearch_SSV = new System.Windows.Forms.TextBox();
             this.buttonOpenOrder_SSV = new System.Windows.Forms.Button();
@@ -59,12 +63,14 @@
             this.buttonAddOrders_SSV = new System.Windows.Forms.Button();
             this.buttonDownloadOrders_SSV = new System.Windows.Forms.Button();
             this.tabControl_SSV = new System.Windows.Forms.TabControl();
-            this.comboBoxColsNames_SSV = new System.Windows.Forms.ComboBox();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.menuStrip_SSV.SuspendLayout();
+            this.tabPageStats_SSV.SuspendLayout();
             this.tabPageOrderData_SSV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTableOrders_SSV)).BeginInit();
             this.groupBoxMovesOrders_SSV.SuspendLayout();
             this.tabControl_SSV.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // openFileDialogTable_SSV
@@ -145,6 +151,7 @@
             // 
             // tabPageStats_SSV
             // 
+            this.tabPageStats_SSV.Controls.Add(this.chart1);
             this.tabPageStats_SSV.Location = new System.Drawing.Point(4, 22);
             this.tabPageStats_SSV.Name = "tabPageStats_SSV";
             this.tabPageStats_SSV.Size = new System.Drawing.Size(1085, 525);
@@ -227,7 +234,7 @@
             // 
             this.groupBoxMovesOrders_SSV.BackColor = System.Drawing.SystemColors.Menu;
             this.groupBoxMovesOrders_SSV.Controls.Add(this.comboBoxColsNames_SSV);
-            this.groupBoxMovesOrders_SSV.Controls.Add(this.label1);
+            this.groupBoxMovesOrders_SSV.Controls.Add(this.labelSearch_SSV);
             this.groupBoxMovesOrders_SSV.Controls.Add(this.textBoxFilter_SSV);
             this.groupBoxMovesOrders_SSV.Controls.Add(this.textBoxSearch_SSV);
             this.groupBoxMovesOrders_SSV.Controls.Add(this.buttonOpenOrder_SSV);
@@ -246,14 +253,32 @@
             this.groupBoxMovesOrders_SSV.TabStop = false;
             this.groupBoxMovesOrders_SSV.Text = "Действия";
             // 
-            // label1
+            // comboBoxColsNames_SSV
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 197);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Введите объект для поиска\r\n";
+            this.comboBoxColsNames_SSV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxColsNames_SSV.FormattingEnabled = true;
+            this.comboBoxColsNames_SSV.Items.AddRange(new object[] {
+            "",
+            "Номер заказа",
+            "Дата исполнения",
+            "Стоимость заказа",
+            "Название товара",
+            "Цена товара",
+            "Количество товаров"});
+            this.comboBoxColsNames_SSV.Location = new System.Drawing.Point(6, 307);
+            this.comboBoxColsNames_SSV.Name = "comboBoxColsNames_SSV";
+            this.comboBoxColsNames_SSV.Size = new System.Drawing.Size(167, 21);
+            this.comboBoxColsNames_SSV.TabIndex = 3;
+            this.comboBoxColsNames_SSV.SelectedIndexChanged += new System.EventHandler(this.comboBoxColsNames_SSV_SelectedIndexChanged);
+            // 
+            // labelSearch_SSV
+            // 
+            this.labelSearch_SSV.AutoSize = true;
+            this.labelSearch_SSV.Location = new System.Drawing.Point(3, 197);
+            this.labelSearch_SSV.Name = "labelSearch_SSV";
+            this.labelSearch_SSV.Size = new System.Drawing.Size(148, 13);
+            this.labelSearch_SSV.TabIndex = 2;
+            this.labelSearch_SSV.Text = "Введите объект для поиска\r\n";
             // 
             // textBoxFilter_SSV
             // 
@@ -356,23 +381,21 @@
             this.tabControl_SSV.Size = new System.Drawing.Size(1093, 551);
             this.tabControl_SSV.TabIndex = 3;
             // 
-            // comboBoxColsNames_SSV
+            // chart1
             // 
-            this.comboBoxColsNames_SSV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxColsNames_SSV.FormattingEnabled = true;
-            this.comboBoxColsNames_SSV.Items.AddRange(new object[] {
-            "",
-            "Номер заказа",
-            "Дата исполнения",
-            "Стоимость заказа",
-            "Название товара",
-            "Цена товара",
-            "Количество товаров"});
-            this.comboBoxColsNames_SSV.Location = new System.Drawing.Point(6, 307);
-            this.comboBoxColsNames_SSV.Name = "comboBoxColsNames_SSV";
-            this.comboBoxColsNames_SSV.Size = new System.Drawing.Size(167, 21);
-            this.comboBoxColsNames_SSV.TabIndex = 3;
-            this.comboBoxColsNames_SSV.SelectedIndexChanged += new System.EventHandler(this.comboBoxColsNames_SSV_SelectedIndexChanged);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(8, 3);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(399, 307);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
             // 
             // FormMain_SSV
             // 
@@ -387,11 +410,13 @@
             this.Text = "Form1";
             this.menuStrip_SSV.ResumeLayout(false);
             this.menuStrip_SSV.PerformLayout();
+            this.tabPageStats_SSV.ResumeLayout(false);
             this.tabPageOrderData_SSV.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTableOrders_SSV)).EndInit();
             this.groupBoxMovesOrders_SSV.ResumeLayout(false);
             this.groupBoxMovesOrders_SSV.PerformLayout();
             this.tabControl_SSV.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -428,8 +453,9 @@
         private System.Windows.Forms.Button buttonSearch_SSV;
         private System.Windows.Forms.TextBox textBoxFilter_SSV;
         private System.Windows.Forms.Button buttonRemoveRows_SSV;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelSearch_SSV;
         private System.Windows.Forms.ComboBox comboBoxColsNames_SSV;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
 
