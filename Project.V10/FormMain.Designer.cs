@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip_SSV = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItemInfo_SSV = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemInstruction_SSV = new System.Windows.Forms.ToolStripMenuItem();
@@ -36,6 +37,7 @@
             this.labelMain_SSV = new System.Windows.Forms.Label();
             this.buttonEnterWorker_SSV = new System.Windows.Forms.Button();
             this.buttonEnterClient_SSV = new System.Windows.Forms.Button();
+            this.toolTip_SSV = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip_SSV.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +66,7 @@
             this.toolStripMenuItemInstruction_SSV.Name = "toolStripMenuItemInstruction_SSV";
             this.toolStripMenuItemInstruction_SSV.Size = new System.Drawing.Size(268, 22);
             this.toolStripMenuItemInstruction_SSV.Text = "Краткое руководство пользователя";
+            this.toolStripMenuItemInstruction_SSV.ToolTipText = "Гайд по использованию программы";
             this.toolStripMenuItemInstruction_SSV.Click += new System.EventHandler(this.toolStripMenuItemInstruction_SSV_Click);
             // 
             // toolStripMenuItemAbout_SSV
@@ -71,6 +74,7 @@
             this.toolStripMenuItemAbout_SSV.Name = "toolStripMenuItemAbout_SSV";
             this.toolStripMenuItemAbout_SSV.Size = new System.Drawing.Size(268, 22);
             this.toolStripMenuItemAbout_SSV.Text = "О программе ";
+            this.toolStripMenuItemAbout_SSV.ToolTipText = "Информация о разработчике";
             this.toolStripMenuItemAbout_SSV.Click += new System.EventHandler(this.toolStripMenuItemAbout_SSV_Click);
             // 
             // toolStripMenuItemExit_SSV
@@ -98,6 +102,7 @@
             this.buttonEnterWorker_SSV.Size = new System.Drawing.Size(170, 39);
             this.buttonEnterWorker_SSV.TabIndex = 7;
             this.buttonEnterWorker_SSV.Text = "Как рабочий";
+            this.toolTip_SSV.SetToolTip(this.buttonEnterWorker_SSV, "Открыть окно для работника");
             this.buttonEnterWorker_SSV.UseVisualStyleBackColor = true;
             this.buttonEnterWorker_SSV.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -109,6 +114,7 @@
             this.buttonEnterClient_SSV.Size = new System.Drawing.Size(170, 39);
             this.buttonEnterClient_SSV.TabIndex = 7;
             this.buttonEnterClient_SSV.Text = "Как пользователь";
+            this.toolTip_SSV.SetToolTip(this.buttonEnterClient_SSV, "Открыть окно заказчика");
             this.buttonEnterClient_SSV.UseVisualStyleBackColor = true;
             this.buttonEnterClient_SSV.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -121,6 +127,10 @@
             this.Controls.Add(this.buttonEnterWorker_SSV);
             this.Controls.Add(this.labelMain_SSV);
             this.Controls.Add(this.menuStrip_SSV);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(536, 306);
             this.Name = "FormMain_SSV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Вход";
@@ -141,5 +151,6 @@
         private System.Windows.Forms.Label labelMain_SSV;
         private System.Windows.Forms.Button buttonEnterWorker_SSV;
         private System.Windows.Forms.Button buttonEnterClient_SSV;
+        private System.Windows.Forms.ToolTip toolTip_SSV;
     }
 }

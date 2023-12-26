@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.numericUpDownTovar1_SSV = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownTovar2_SSV = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownTovar3_SSV = new System.Windows.Forms.NumericUpDown();
@@ -50,6 +51,7 @@
             this.radioButtonTovar1_SSV = new System.Windows.Forms.RadioButton();
             this.radioButtonTovar2_SSV = new System.Windows.Forms.RadioButton();
             this.radioButtonTovar3_SSV = new System.Windows.Forms.RadioButton();
+            this.toolTip_SSV = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTovar1_SSV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTovar2_SSV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTovar3_SSV)).BeginInit();
@@ -108,6 +110,7 @@
             this.toolStripMenuItemInstruction_SSV.Name = "toolStripMenuItemInstruction_SSV";
             this.toolStripMenuItemInstruction_SSV.Size = new System.Drawing.Size(268, 22);
             this.toolStripMenuItemInstruction_SSV.Text = "Краткое руководство пользователя";
+            this.toolStripMenuItemInstruction_SSV.ToolTipText = "Гайд по использованию программы";
             this.toolStripMenuItemInstruction_SSV.Click += new System.EventHandler(this.toolStripMenuItemInstruction_SSV_Click);
             // 
             // toolStripMenuItemAbout_SSV
@@ -115,6 +118,7 @@
             this.toolStripMenuItemAbout_SSV.Name = "toolStripMenuItemAbout_SSV";
             this.toolStripMenuItemAbout_SSV.Size = new System.Drawing.Size(268, 22);
             this.toolStripMenuItemAbout_SSV.Text = "О программе ";
+            this.toolStripMenuItemAbout_SSV.ToolTipText = "Информация о разработчике";
             this.toolStripMenuItemAbout_SSV.Click += new System.EventHandler(this.toolStripMenuItemAbout_SSV_Click);
             // 
             // toolStripMenuItemExit_SSV
@@ -181,6 +185,7 @@
             this.buttonDoOrder_SSV.Size = new System.Drawing.Size(225, 40);
             this.buttonDoOrder_SSV.TabIndex = 10;
             this.buttonDoOrder_SSV.Text = "Отправить заказ";
+            this.toolTip_SSV.SetToolTip(this.buttonDoOrder_SSV, "Отправить заказ");
             this.buttonDoOrder_SSV.UseVisualStyleBackColor = true;
             this.buttonDoOrder_SSV.Click += new System.EventHandler(this.buttonDoOrder_SSV_Click);
             // 
@@ -256,6 +261,7 @@
             // 
             this.radioButtonTovar3_SSV.AutoSize = true;
             this.radioButtonTovar3_SSV.Location = new System.Drawing.Point(11, 102);
+            this.radioButtonTovar3_SSV.MinimumSize = new System.Drawing.Size(89, 17);
             this.radioButtonTovar3_SSV.Name = "radioButtonTovar3_SSV";
             this.radioButtonTovar3_SSV.Size = new System.Drawing.Size(89, 17);
             this.radioButtonTovar3_SSV.TabIndex = 13;
@@ -287,6 +293,9 @@
             this.Controls.Add(this.numericUpDownTovar3_SSV);
             this.Controls.Add(this.numericUpDownTovar2_SSV);
             this.Controls.Add(this.numericUpDownTovar1_SSV);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormClients_SSV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Окно заказчика";
@@ -324,5 +333,6 @@
         private System.Windows.Forms.RadioButton radioButtonTovar1_SSV;
         private System.Windows.Forms.RadioButton radioButtonTovar2_SSV;
         private System.Windows.Forms.RadioButton radioButtonTovar3_SSV;
+        private System.Windows.Forms.ToolTip toolTip_SSV;
     }
 }

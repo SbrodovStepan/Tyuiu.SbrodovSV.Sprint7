@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.saveFileDialogTable_SSV = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialogTable_SSV = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip_SSV = new System.Windows.Forms.MenuStrip();
@@ -76,6 +77,7 @@
             this.buttonAddOrders_SSV = new System.Windows.Forms.Button();
             this.buttonDownloadOrders_SSV = new System.Windows.Forms.Button();
             this.tabControl_SSV = new System.Windows.Forms.TabControl();
+            this.toolTip_SSV = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip_SSV.SuspendLayout();
             this.tabPageStats_SSV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartStats_SSV)).BeginInit();
@@ -111,26 +113,30 @@
             this.toolStripMenuFile_SSV.Name = "toolStripMenuFile_SSV";
             this.toolStripMenuFile_SSV.Size = new System.Drawing.Size(48, 20);
             this.toolStripMenuFile_SSV.Text = "Файл";
+            this.toolStripMenuFile_SSV.ToolTipText = "Действия над файлом";
             // 
             // toolStripMenuItemAdd_SSV
             // 
             this.toolStripMenuItemAdd_SSV.Name = "toolStripMenuItemAdd_SSV";
-            this.toolStripMenuItemAdd_SSV.Size = new System.Drawing.Size(133, 22);
+            this.toolStripMenuItemAdd_SSV.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemAdd_SSV.Text = "Добавить";
+            this.toolStripMenuItemAdd_SSV.ToolTipText = "Добавить заказ в базу данных";
             this.toolStripMenuItemAdd_SSV.Click += new System.EventHandler(this.buttonAdd_SSV_Click);
             // 
             // toolStripMenuItemOpen_SSV
             // 
             this.toolStripMenuItemOpen_SSV.Name = "toolStripMenuItemOpen_SSV";
-            this.toolStripMenuItemOpen_SSV.Size = new System.Drawing.Size(133, 22);
+            this.toolStripMenuItemOpen_SSV.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemOpen_SSV.Text = "Открыть";
+            this.toolStripMenuItemOpen_SSV.ToolTipText = "Выберите базу данных в формате csv для открытия в программе";
             this.toolStripMenuItemOpen_SSV.Click += new System.EventHandler(this.buttonOpen_SSV_Click);
             // 
             // toolStripMenuItemSave_SSV
             // 
             this.toolStripMenuItemSave_SSV.Name = "toolStripMenuItemSave_SSV";
-            this.toolStripMenuItemSave_SSV.Size = new System.Drawing.Size(133, 22);
+            this.toolStripMenuItemSave_SSV.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemSave_SSV.Text = "Сохранить";
+            this.toolStripMenuItemSave_SSV.ToolTipText = "Укажите путь для сохранения базы данных";
             this.toolStripMenuItemSave_SSV.Click += new System.EventHandler(this.buttonDownload_SSV_Click);
             // 
             // SearchToolStripMenuItem_SSV
@@ -140,12 +146,14 @@
             this.SearchToolStripMenuItem_SSV.Name = "SearchToolStripMenuItem_SSV";
             this.SearchToolStripMenuItem_SSV.Size = new System.Drawing.Size(53, 20);
             this.SearchToolStripMenuItem_SSV.Text = "Найти";
+            this.SearchToolStripMenuItem_SSV.ToolTipText = "Поиск в таблице";
             // 
             // toolStripTextBoxSearch_SSV
             // 
             this.toolStripTextBoxSearch_SSV.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBoxSearch_SSV.Name = "toolStripTextBoxSearch_SSV";
             this.toolStripTextBoxSearch_SSV.Size = new System.Drawing.Size(100, 23);
+            this.toolStripTextBoxSearch_SSV.ToolTipText = "Введите слово, которые желаете найти в таблице";
             this.toolStripTextBoxSearch_SSV.TextChanged += new System.EventHandler(this.toolStripTextBoxSearch_SSV_TextChanged);
             // 
             // toolStripMenuItemInfo_SSV
@@ -156,12 +164,14 @@
             this.toolStripMenuItemInfo_SSV.Name = "toolStripMenuItemInfo_SSV";
             this.toolStripMenuItemInfo_SSV.Size = new System.Drawing.Size(65, 20);
             this.toolStripMenuItemInfo_SSV.Text = "Справка";
+            this.toolStripMenuItemInfo_SSV.ToolTipText = "Гайд по использовонию + данных о разработчике";
             // 
             // toolStripMenuItemInstruction_SSV
             // 
             this.toolStripMenuItemInstruction_SSV.Name = "toolStripMenuItemInstruction_SSV";
             this.toolStripMenuItemInstruction_SSV.Size = new System.Drawing.Size(268, 22);
             this.toolStripMenuItemInstruction_SSV.Text = "Краткое руководство пользователя";
+            this.toolStripMenuItemInstruction_SSV.ToolTipText = "Гайд по использованию программы";
             this.toolStripMenuItemInstruction_SSV.Click += new System.EventHandler(this.toolStripMenuItemInstruction_SSV_Click);
             // 
             // toolStripMenuItemAbout_SSV
@@ -169,6 +179,7 @@
             this.toolStripMenuItemAbout_SSV.Name = "toolStripMenuItemAbout_SSV";
             this.toolStripMenuItemAbout_SSV.Size = new System.Drawing.Size(268, 22);
             this.toolStripMenuItemAbout_SSV.Text = "О программе ";
+            this.toolStripMenuItemAbout_SSV.ToolTipText = "Информация о разработчике";
             this.toolStripMenuItemAbout_SSV.Click += new System.EventHandler(this.buttonInfo_SSV_Click);
             // 
             // toolStripMenuItemExit_SSV
@@ -176,6 +187,7 @@
             this.toolStripMenuItemExit_SSV.Name = "toolStripMenuItemExit_SSV";
             this.toolStripMenuItemExit_SSV.Size = new System.Drawing.Size(54, 20);
             this.toolStripMenuItemExit_SSV.Text = "Выход";
+            this.toolStripMenuItemExit_SSV.ToolTipText = "Закрыть данную форму";
             this.toolStripMenuItemExit_SSV.Click += new System.EventHandler(this.toolStripMenuItemExit_SSV_Click);
             // 
             // tabPageStats_SSV
@@ -232,6 +244,7 @@
             this.buttonMaxSum_SSV.Size = new System.Drawing.Size(170, 39);
             this.buttonMaxSum_SSV.TabIndex = 1;
             this.buttonMaxSum_SSV.Text = "Узнать максимальную сумму заказа";
+            this.toolTip_SSV.SetToolTip(this.buttonMaxSum_SSV, "Узнайте максимальную сумму заказа");
             this.buttonMaxSum_SSV.UseVisualStyleBackColor = true;
             this.buttonMaxSum_SSV.Click += new System.EventHandler(this.buttonMaxSum_SSV_Click);
             // 
@@ -242,6 +255,7 @@
             this.buttonGetMinSum_SSV.Size = new System.Drawing.Size(170, 39);
             this.buttonGetMinSum_SSV.TabIndex = 1;
             this.buttonGetMinSum_SSV.Text = "Узнать минимальную сумму заказа";
+            this.toolTip_SSV.SetToolTip(this.buttonGetMinSum_SSV, "Узнайте минимальную сумму заказа");
             this.buttonGetMinSum_SSV.UseVisualStyleBackColor = true;
             this.buttonGetMinSum_SSV.Click += new System.EventHandler(this.buttonGetMinSum_SSV_Click);
             // 
@@ -252,6 +266,7 @@
             this.buttonGetAVG_SSV.Size = new System.Drawing.Size(170, 39);
             this.buttonGetAVG_SSV.TabIndex = 1;
             this.buttonGetAVG_SSV.Text = "Узнать среднюю цену заказа\r\n";
+            this.toolTip_SSV.SetToolTip(this.buttonGetAVG_SSV, "Узнайте сумму заказа в среднем");
             this.buttonGetAVG_SSV.UseVisualStyleBackColor = true;
             this.buttonGetAVG_SSV.Click += new System.EventHandler(this.buttonGetAVG_SSV_Click);
             // 
@@ -262,6 +277,7 @@
             this.buttonGetProfit_SSV.Size = new System.Drawing.Size(170, 39);
             this.buttonGetProfit_SSV.TabIndex = 1;
             this.buttonGetProfit_SSV.Text = "Узнать сумму выручки\r\n";
+            this.toolTip_SSV.SetToolTip(this.buttonGetProfit_SSV, "Узнайте сумму выручки за всё время");
             this.buttonGetProfit_SSV.UseVisualStyleBackColor = true;
             this.buttonGetProfit_SSV.Click += new System.EventHandler(this.buttonGetProfit_SSV_Click);
             // 
@@ -272,22 +288,23 @@
             this.buttonGetStats_SSV.Size = new System.Drawing.Size(170, 39);
             this.buttonGetStats_SSV.TabIndex = 1;
             this.buttonGetStats_SSV.Text = "Получить статистику по популярным товарам";
+            this.toolTip_SSV.SetToolTip(this.buttonGetStats_SSV, "Получите статистику по самым популярным товарам");
             this.buttonGetStats_SSV.UseVisualStyleBackColor = true;
             this.buttonGetStats_SSV.Click += new System.EventHandler(this.button1_Click);
             // 
             // chartStats_SSV
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chartStats_SSV.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chartStats_SSV.Legends.Add(legend4);
+            chartArea5.Name = "ChartArea1";
+            this.chartStats_SSV.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chartStats_SSV.Legends.Add(legend5);
             this.chartStats_SSV.Location = new System.Drawing.Point(8, 3);
             this.chartStats_SSV.Name = "chartStats_SSV";
-            series4.ChartArea = "ChartArea1";
-            series4.IsVisibleInLegend = false;
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chartStats_SSV.Series.Add(series4);
+            series5.ChartArea = "ChartArea1";
+            series5.IsVisibleInLegend = false;
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chartStats_SSV.Series.Add(series5);
             this.chartStats_SSV.Size = new System.Drawing.Size(475, 327);
             this.chartStats_SSV.TabIndex = 0;
             this.chartStats_SSV.Text = "chart1";
@@ -421,6 +438,7 @@
             this.comboBoxColsNames_SSV.Name = "comboBoxColsNames_SSV";
             this.comboBoxColsNames_SSV.Size = new System.Drawing.Size(167, 21);
             this.comboBoxColsNames_SSV.TabIndex = 3;
+            this.toolTip_SSV.SetToolTip(this.comboBoxColsNames_SSV, "Выберите столбец для фильтрования");
             this.comboBoxColsNames_SSV.SelectedIndexChanged += new System.EventHandler(this.comboBoxColsNames_SSV_SelectedIndexChanged);
             // 
             // labelSearch_SSV
@@ -439,6 +457,7 @@
             this.textBoxFilter_SSV.Name = "textBoxFilter_SSV";
             this.textBoxFilter_SSV.Size = new System.Drawing.Size(168, 20);
             this.textBoxFilter_SSV.TabIndex = 1;
+            this.toolTip_SSV.SetToolTip(this.textBoxFilter_SSV, "Напишите слово по которому нужно отфильтровать таблицу");
             // 
             // textBoxSearch_SSV
             // 
@@ -446,6 +465,7 @@
             this.textBoxSearch_SSV.Name = "textBoxSearch_SSV";
             this.textBoxSearch_SSV.Size = new System.Drawing.Size(168, 20);
             this.textBoxSearch_SSV.TabIndex = 1;
+            this.toolTip_SSV.SetToolTip(this.textBoxSearch_SSV, "Введите слово, которые желаете найти в таблице");
             this.textBoxSearch_SSV.TextChanged += new System.EventHandler(this.textBoxSearch_SSV_TextChanged_1);
             // 
             // buttonOpenOrder_SSV
@@ -456,6 +476,7 @@
             this.buttonOpenOrder_SSV.Size = new System.Drawing.Size(170, 39);
             this.buttonOpenOrder_SSV.TabIndex = 0;
             this.buttonOpenOrder_SSV.Text = "Открыть базу данных по заказам";
+            this.toolTip_SSV.SetToolTip(this.buttonOpenOrder_SSV, "Выберите базу данных в формате csv для открытия в программе");
             this.buttonOpenOrder_SSV.UseVisualStyleBackColor = true;
             this.buttonOpenOrder_SSV.Click += new System.EventHandler(this.buttonOpen_SSV_Click);
             // 
@@ -468,6 +489,7 @@
             this.buttonRemoveRows_SSV.Size = new System.Drawing.Size(170, 39);
             this.buttonRemoveRows_SSV.TabIndex = 0;
             this.buttonRemoveRows_SSV.Text = "Удалить заказ";
+            this.toolTip_SSV.SetToolTip(this.buttonRemoveRows_SSV, "Удалить заказ из базы данных");
             this.buttonRemoveRows_SSV.UseVisualStyleBackColor = true;
             this.buttonRemoveRows_SSV.Click += new System.EventHandler(this.buttonRemoveRows_SSV_Click);
             // 
@@ -480,6 +502,7 @@
             this.buttonFilter_SSV.Size = new System.Drawing.Size(170, 39);
             this.buttonFilter_SSV.TabIndex = 0;
             this.buttonFilter_SSV.Text = "Отфильтровать";
+            this.toolTip_SSV.SetToolTip(this.buttonFilter_SSV, "Отфильтровать по указанным данным(стобец, слово)");
             this.buttonFilter_SSV.UseVisualStyleBackColor = true;
             this.buttonFilter_SSV.Click += new System.EventHandler(this.buttonFilter_SSV_Click);
             // 
@@ -491,6 +514,7 @@
             this.buttonAddOrders_SSV.Size = new System.Drawing.Size(170, 39);
             this.buttonAddOrders_SSV.TabIndex = 0;
             this.buttonAddOrders_SSV.Text = "Добавить заказ";
+            this.toolTip_SSV.SetToolTip(this.buttonAddOrders_SSV, "Добавить заказ в базу данных");
             this.buttonAddOrders_SSV.UseVisualStyleBackColor = true;
             this.buttonAddOrders_SSV.Click += new System.EventHandler(this.buttonAdd_SSV_Click);
             // 
@@ -502,6 +526,7 @@
             this.buttonDownloadOrders_SSV.Size = new System.Drawing.Size(170, 39);
             this.buttonDownloadOrders_SSV.TabIndex = 0;
             this.buttonDownloadOrders_SSV.Text = "Сохранить базу данных по заказам";
+            this.toolTip_SSV.SetToolTip(this.buttonDownloadOrders_SSV, "Укажите путь для сохранения базы данных");
             this.buttonDownloadOrders_SSV.UseVisualStyleBackColor = true;
             this.buttonDownloadOrders_SSV.Click += new System.EventHandler(this.buttonDownload_SSV_Click);
             // 
@@ -515,6 +540,7 @@
             this.tabControl_SSV.SelectedIndex = 0;
             this.tabControl_SSV.Size = new System.Drawing.Size(956, 378);
             this.tabControl_SSV.TabIndex = 3;
+            this.tabControl_SSV.SelectedIndexChanged += new System.EventHandler(this.tabControl_SSV_SelectedIndexChanged);
             // 
             // FormWorkers_SSV
             // 
@@ -524,6 +550,7 @@
             this.Controls.Add(this.tabControl_SSV);
             this.Controls.Add(this.menuStrip_SSV);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(972, 441);
             this.Name = "FormWorkers_SSV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Окно работника";
@@ -590,6 +617,7 @@
         private System.Windows.Forms.TextBox textBoxMaxSum_SSV;
         private System.Windows.Forms.TextBox textBoxAVG_SSV;
         private System.Windows.Forms.TextBox textBoxMinSum_SSV;
+        private System.Windows.Forms.ToolTip toolTip_SSV;
     }
 }
 

@@ -345,6 +345,24 @@ namespace Project.V10
             buttonDownload_SSV();
         }
 
+        private void tabControl_SSV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (tabControl_SSV.SelectedIndex)
+            {
+                case 0:
+                    this.MaximizeBox = true;
+                    this.FormBorderStyle = FormBorderStyle.Sizable;
+                    break;
+                case 1:
+                    this.MaximizeBox = false;
+                    this.FormBorderStyle = FormBorderStyle.FixedSingle;
+                    break;
+                default:
+                    break;
+            }
+
+        }
+
         private void dataGridViewTable_SSV_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
         {
             int index = e.RowIndex;
