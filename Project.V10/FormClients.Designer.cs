@@ -28,153 +28,93 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.numericUpDown7 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.numericUpDownTovar1_SSV = new System.Windows.Forms.NumericUpDown();
+            this.checkBoxTovar1_SSV = new System.Windows.Forms.CheckBox();
+            this.numericUpDownTovar2_SSV = new System.Windows.Forms.NumericUpDown();
+            this.checkBoxTovar2_SSV = new System.Windows.Forms.CheckBox();
+            this.numericUpDownTovar3_SSV = new System.Windows.Forms.NumericUpDown();
+            this.checkBoxTovar3_SSV = new System.Windows.Forms.CheckBox();
             this.menuStrip_SSV = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItemInfo_SSV = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemInstruction_SSV = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemAbout_SSV = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemExit_SSV = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).BeginInit();
+            this.labelDate_SSV = new System.Windows.Forms.Label();
+            this.dateTimePickerOrderEnd_SSV = new System.Windows.Forms.DateTimePicker();
+            this.textBoxPrice1_SSV = new System.Windows.Forms.TextBox();
+            this.textBoxPrice2_SSV = new System.Windows.Forms.TextBox();
+            this.textBoxPrice3_SSV = new System.Windows.Forms.TextBox();
+            this.buttonDoOrder_SSV = new System.Windows.Forms.Button();
+            this.textBoxLastPrice_SSV = new System.Windows.Forms.TextBox();
+            this.labelLastPrice_SSV = new System.Windows.Forms.Label();
+            this.labelTovar_SSV = new System.Windows.Forms.Label();
+            this.labelPrice_SSV = new System.Windows.Forms.Label();
+            this.labelKolvo_SSV = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTovar1_SSV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTovar2_SSV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTovar3_SSV)).BeginInit();
             this.menuStrip_SSV.SuspendLayout();
             this.SuspendLayout();
             // 
-            // numericUpDown1
+            // numericUpDownTovar1_SSV
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(500, 107);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(29, 20);
-            this.numericUpDown1.TabIndex = 1;
+            this.numericUpDownTovar1_SSV.Enabled = false;
+            this.numericUpDownTovar1_SSV.Location = new System.Drawing.Point(172, 52);
+            this.numericUpDownTovar1_SSV.Name = "numericUpDownTovar1_SSV";
+            this.numericUpDownTovar1_SSV.Size = new System.Drawing.Size(66, 20);
+            this.numericUpDownTovar1_SSV.TabIndex = 1;
+            this.numericUpDownTovar1_SSV.ValueChanged += new System.EventHandler(this.numericUpDownTovar1_SSV_ValueChanged);
             // 
-            // checkBox1
+            // checkBoxTovar1_SSV
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(414, 108);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxTovar1_SSV.AutoSize = true;
+            this.checkBoxTovar1_SSV.Location = new System.Drawing.Point(12, 55);
+            this.checkBoxTovar1_SSV.Name = "checkBoxTovar1_SSV";
+            this.checkBoxTovar1_SSV.Size = new System.Drawing.Size(68, 17);
+            this.checkBoxTovar1_SSV.TabIndex = 2;
+            this.checkBoxTovar1_SSV.Text = "СУ-2106";
+            this.checkBoxTovar1_SSV.UseVisualStyleBackColor = true;
+            this.checkBoxTovar1_SSV.CheckedChanged += new System.EventHandler(this.checkBoxTovar1_SSV_CheckedChanged);
             // 
-            // numericUpDown2
+            // numericUpDownTovar2_SSV
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(500, 130);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(29, 20);
-            this.numericUpDown2.TabIndex = 1;
+            this.numericUpDownTovar2_SSV.Enabled = false;
+            this.numericUpDownTovar2_SSV.Location = new System.Drawing.Point(172, 79);
+            this.numericUpDownTovar2_SSV.Name = "numericUpDownTovar2_SSV";
+            this.numericUpDownTovar2_SSV.Size = new System.Drawing.Size(66, 20);
+            this.numericUpDownTovar2_SSV.TabIndex = 1;
+            this.numericUpDownTovar2_SSV.ValueChanged += new System.EventHandler(this.numericUpDownTovar2_SSV_ValueChanged);
             // 
-            // checkBox2
+            // checkBoxTovar2_SSV
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(414, 131);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(80, 17);
-            this.checkBox2.TabIndex = 2;
-            this.checkBox2.Text = "checkBox1";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBoxTovar2_SSV.AutoSize = true;
+            this.checkBoxTovar2_SSV.Location = new System.Drawing.Point(12, 78);
+            this.checkBoxTovar2_SSV.Name = "checkBoxTovar2_SSV";
+            this.checkBoxTovar2_SSV.Size = new System.Drawing.Size(104, 17);
+            this.checkBoxTovar2_SSV.TabIndex = 2;
+            this.checkBoxTovar2_SSV.Text = "Зимняя резина";
+            this.checkBoxTovar2_SSV.UseVisualStyleBackColor = true;
+            this.checkBoxTovar2_SSV.CheckedChanged += new System.EventHandler(this.checkBoxTovar2_SSV_CheckedChanged);
             // 
-            // numericUpDown3
+            // numericUpDownTovar3_SSV
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(500, 153);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(29, 20);
-            this.numericUpDown3.TabIndex = 1;
+            this.numericUpDownTovar3_SSV.Enabled = false;
+            this.numericUpDownTovar3_SSV.Location = new System.Drawing.Point(172, 103);
+            this.numericUpDownTovar3_SSV.Name = "numericUpDownTovar3_SSV";
+            this.numericUpDownTovar3_SSV.Size = new System.Drawing.Size(66, 20);
+            this.numericUpDownTovar3_SSV.TabIndex = 1;
+            this.numericUpDownTovar3_SSV.ValueChanged += new System.EventHandler(this.numericUpDownTovar3_SSV_ValueChanged);
             // 
-            // checkBox3
+            // checkBoxTovar3_SSV
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(414, 154);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(80, 17);
-            this.checkBox3.TabIndex = 2;
-            this.checkBox3.Text = "checkBox1";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // numericUpDown4
-            // 
-            this.numericUpDown4.Location = new System.Drawing.Point(500, 176);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(29, 20);
-            this.numericUpDown4.TabIndex = 1;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(414, 177);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(80, 17);
-            this.checkBox4.TabIndex = 2;
-            this.checkBox4.Text = "checkBox1";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // numericUpDown5
-            // 
-            this.numericUpDown5.Location = new System.Drawing.Point(500, 199);
-            this.numericUpDown5.Name = "numericUpDown5";
-            this.numericUpDown5.Size = new System.Drawing.Size(29, 20);
-            this.numericUpDown5.TabIndex = 1;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(414, 200);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(80, 17);
-            this.checkBox5.TabIndex = 2;
-            this.checkBox5.Text = "checkBox1";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // numericUpDown6
-            // 
-            this.numericUpDown6.Location = new System.Drawing.Point(500, 222);
-            this.numericUpDown6.Name = "numericUpDown6";
-            this.numericUpDown6.Size = new System.Drawing.Size(29, 20);
-            this.numericUpDown6.TabIndex = 1;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(414, 223);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(80, 17);
-            this.checkBox6.TabIndex = 2;
-            this.checkBox6.Text = "checkBox1";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // numericUpDown7
-            // 
-            this.numericUpDown7.Location = new System.Drawing.Point(500, 245);
-            this.numericUpDown7.Name = "numericUpDown7";
-            this.numericUpDown7.Size = new System.Drawing.Size(29, 20);
-            this.numericUpDown7.TabIndex = 1;
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(414, 246);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(80, 17);
-            this.checkBox7.TabIndex = 2;
-            this.checkBox7.Text = "checkBox1";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.checkBoxTovar3_SSV.AutoSize = true;
+            this.checkBoxTovar3_SSV.Location = new System.Drawing.Point(12, 101);
+            this.checkBoxTovar3_SSV.Name = "checkBoxTovar3_SSV";
+            this.checkBoxTovar3_SSV.Size = new System.Drawing.Size(56, 17);
+            this.checkBoxTovar3_SSV.TabIndex = 2;
+            this.checkBoxTovar3_SSV.Text = "Свечи";
+            this.checkBoxTovar3_SSV.UseVisualStyleBackColor = true;
+            this.checkBoxTovar3_SSV.CheckedChanged += new System.EventHandler(this.checkBoxTovar3_SSV_CheckedChanged);
             // 
             // menuStrip_SSV
             // 
@@ -183,7 +123,7 @@
             this.toolStripMenuItemExit_SSV});
             this.menuStrip_SSV.Location = new System.Drawing.Point(0, 0);
             this.menuStrip_SSV.Name = "menuStrip_SSV";
-            this.menuStrip_SSV.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip_SSV.Size = new System.Drawing.Size(534, 24);
             this.menuStrip_SSV.TabIndex = 6;
             this.menuStrip_SSV.Text = "menuStrip1";
             // 
@@ -217,36 +157,136 @@
             this.toolStripMenuItemExit_SSV.Text = "Выход";
             this.toolStripMenuItemExit_SSV.Click += new System.EventHandler(this.toolStripMenuItemExit_SSV_Click);
             // 
+            // labelDate_SSV
+            // 
+            this.labelDate_SSV.AutoSize = true;
+            this.labelDate_SSV.BackColor = System.Drawing.Color.White;
+            this.labelDate_SSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
+            this.labelDate_SSV.Location = new System.Drawing.Point(8, 163);
+            this.labelDate_SSV.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelDate_SSV.Name = "labelDate_SSV";
+            this.labelDate_SSV.Size = new System.Drawing.Size(230, 15);
+            this.labelDate_SSV.TabIndex = 8;
+            this.labelDate_SSV.Text = "Выберите желаемую дату исполнения";
+            // 
+            // dateTimePickerOrderEnd_SSV
+            // 
+            this.dateTimePickerOrderEnd_SSV.Location = new System.Drawing.Point(11, 181);
+            this.dateTimePickerOrderEnd_SSV.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePickerOrderEnd_SSV.Name = "dateTimePickerOrderEnd_SSV";
+            this.dateTimePickerOrderEnd_SSV.Size = new System.Drawing.Size(227, 20);
+            this.dateTimePickerOrderEnd_SSV.TabIndex = 7;
+            // 
+            // textBoxPrice1_SSV
+            // 
+            this.textBoxPrice1_SSV.Location = new System.Drawing.Point(122, 53);
+            this.textBoxPrice1_SSV.Name = "textBoxPrice1_SSV";
+            this.textBoxPrice1_SSV.ReadOnly = true;
+            this.textBoxPrice1_SSV.Size = new System.Drawing.Size(41, 20);
+            this.textBoxPrice1_SSV.TabIndex = 9;
+            this.textBoxPrice1_SSV.Text = "30.000";
+            // 
+            // textBoxPrice2_SSV
+            // 
+            this.textBoxPrice2_SSV.Location = new System.Drawing.Point(122, 76);
+            this.textBoxPrice2_SSV.Name = "textBoxPrice2_SSV";
+            this.textBoxPrice2_SSV.ReadOnly = true;
+            this.textBoxPrice2_SSV.Size = new System.Drawing.Size(41, 20);
+            this.textBoxPrice2_SSV.TabIndex = 9;
+            this.textBoxPrice2_SSV.Text = "16.000";
+            // 
+            // textBoxPrice3_SSV
+            // 
+            this.textBoxPrice3_SSV.Location = new System.Drawing.Point(122, 102);
+            this.textBoxPrice3_SSV.Name = "textBoxPrice3_SSV";
+            this.textBoxPrice3_SSV.ReadOnly = true;
+            this.textBoxPrice3_SSV.Size = new System.Drawing.Size(41, 20);
+            this.textBoxPrice3_SSV.TabIndex = 9;
+            this.textBoxPrice3_SSV.Text = "600";
+            // 
+            // buttonDoOrder_SSV
+            // 
+            this.buttonDoOrder_SSV.Location = new System.Drawing.Point(12, 207);
+            this.buttonDoOrder_SSV.Name = "buttonDoOrder_SSV";
+            this.buttonDoOrder_SSV.Size = new System.Drawing.Size(225, 40);
+            this.buttonDoOrder_SSV.TabIndex = 10;
+            this.buttonDoOrder_SSV.Text = "Отправить заказ";
+            this.buttonDoOrder_SSV.UseVisualStyleBackColor = true;
+            this.buttonDoOrder_SSV.Click += new System.EventHandler(this.buttonDoOrder_SSV_Click);
+            // 
+            // textBoxLastPrice_SSV
+            // 
+            this.textBoxLastPrice_SSV.Location = new System.Drawing.Point(103, 140);
+            this.textBoxLastPrice_SSV.Name = "textBoxLastPrice_SSV";
+            this.textBoxLastPrice_SSV.ReadOnly = true;
+            this.textBoxLastPrice_SSV.Size = new System.Drawing.Size(103, 20);
+            this.textBoxLastPrice_SSV.TabIndex = 9;
+            // 
+            // labelLastPrice_SSV
+            // 
+            this.labelLastPrice_SSV.AutoSize = true;
+            this.labelLastPrice_SSV.Location = new System.Drawing.Point(12, 140);
+            this.labelLastPrice_SSV.Name = "labelLastPrice_SSV";
+            this.labelLastPrice_SSV.Size = new System.Drawing.Size(85, 13);
+            this.labelLastPrice_SSV.TabIndex = 11;
+            this.labelLastPrice_SSV.Text = "Итоговая цена:";
+            // 
+            // labelTovar_SSV
+            // 
+            this.labelTovar_SSV.AutoSize = true;
+            this.labelTovar_SSV.Location = new System.Drawing.Point(9, 33);
+            this.labelTovar_SSV.Name = "labelTovar_SSV";
+            this.labelTovar_SSV.Size = new System.Drawing.Size(38, 13);
+            this.labelTovar_SSV.TabIndex = 12;
+            this.labelTovar_SSV.Text = "Товар";
+            // 
+            // labelPrice_SSV
+            // 
+            this.labelPrice_SSV.AutoSize = true;
+            this.labelPrice_SSV.Location = new System.Drawing.Point(119, 33);
+            this.labelPrice_SSV.Name = "labelPrice_SSV";
+            this.labelPrice_SSV.Size = new System.Drawing.Size(33, 13);
+            this.labelPrice_SSV.TabIndex = 12;
+            this.labelPrice_SSV.Text = "Цена";
+            // 
+            // labelKolvo_SSV
+            // 
+            this.labelKolvo_SSV.AutoSize = true;
+            this.labelKolvo_SSV.Location = new System.Drawing.Point(169, 33);
+            this.labelKolvo_SSV.Name = "labelKolvo_SSV";
+            this.labelKolvo_SSV.Size = new System.Drawing.Size(66, 13);
+            this.labelKolvo_SSV.TabIndex = 12;
+            this.labelKolvo_SSV.Text = "Количество";
+            // 
             // FormClients_SSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(534, 342);
+            this.Controls.Add(this.labelKolvo_SSV);
+            this.Controls.Add(this.labelPrice_SSV);
+            this.Controls.Add(this.labelTovar_SSV);
+            this.Controls.Add(this.labelLastPrice_SSV);
+            this.Controls.Add(this.buttonDoOrder_SSV);
+            this.Controls.Add(this.textBoxLastPrice_SSV);
+            this.Controls.Add(this.textBoxPrice3_SSV);
+            this.Controls.Add(this.textBoxPrice2_SSV);
+            this.Controls.Add(this.textBoxPrice1_SSV);
+            this.Controls.Add(this.labelDate_SSV);
+            this.Controls.Add(this.dateTimePickerOrderEnd_SSV);
             this.Controls.Add(this.menuStrip_SSV);
-            this.Controls.Add(this.checkBox7);
-            this.Controls.Add(this.numericUpDown7);
-            this.Controls.Add(this.checkBox6);
-            this.Controls.Add(this.numericUpDown6);
-            this.Controls.Add(this.checkBox5);
-            this.Controls.Add(this.numericUpDown5);
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.numericUpDown4);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.checkBoxTovar3_SSV);
+            this.Controls.Add(this.numericUpDownTovar3_SSV);
+            this.Controls.Add(this.checkBoxTovar2_SSV);
+            this.Controls.Add(this.numericUpDownTovar2_SSV);
+            this.Controls.Add(this.checkBoxTovar1_SSV);
+            this.Controls.Add(this.numericUpDownTovar1_SSV);
             this.Name = "FormClients_SSV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormClients";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown7)).EndInit();
+            this.Text = "Окно заказчика";
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTovar1_SSV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTovar2_SSV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTovar3_SSV)).EndInit();
             this.menuStrip_SSV.ResumeLayout(false);
             this.menuStrip_SSV.PerformLayout();
             this.ResumeLayout(false);
@@ -256,24 +296,27 @@
 
         #endregion
 
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.NumericUpDown numericUpDown5;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.NumericUpDown numericUpDown6;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.NumericUpDown numericUpDown7;
-        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.NumericUpDown numericUpDownTovar1_SSV;
+        private System.Windows.Forms.CheckBox checkBoxTovar1_SSV;
+        private System.Windows.Forms.NumericUpDown numericUpDownTovar2_SSV;
+        private System.Windows.Forms.CheckBox checkBoxTovar2_SSV;
+        private System.Windows.Forms.NumericUpDown numericUpDownTovar3_SSV;
+        private System.Windows.Forms.CheckBox checkBoxTovar3_SSV;
         private System.Windows.Forms.MenuStrip menuStrip_SSV;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemInfo_SSV;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemInstruction_SSV;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemAbout_SSV;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemExit_SSV;
+        private System.Windows.Forms.Label labelDate_SSV;
+        private System.Windows.Forms.DateTimePicker dateTimePickerOrderEnd_SSV;
+        private System.Windows.Forms.TextBox textBoxPrice1_SSV;
+        private System.Windows.Forms.TextBox textBoxPrice2_SSV;
+        private System.Windows.Forms.TextBox textBoxPrice3_SSV;
+        private System.Windows.Forms.Button buttonDoOrder_SSV;
+        private System.Windows.Forms.TextBox textBoxLastPrice_SSV;
+        private System.Windows.Forms.Label labelLastPrice_SSV;
+        private System.Windows.Forms.Label labelTovar_SSV;
+        private System.Windows.Forms.Label labelPrice_SSV;
+        private System.Windows.Forms.Label labelKolvo_SSV;
     }
 }

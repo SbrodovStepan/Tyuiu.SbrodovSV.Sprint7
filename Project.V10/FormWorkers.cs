@@ -10,6 +10,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Project.V10
 {
@@ -28,28 +29,27 @@ namespace Project.V10
         string openFilePath;
         int cols, rows;
 
-        private void aboutProgramToolStripMenuItem_SSV_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Эта программа содержит в себе данные:\r* О заказах клиентов(Номер заказа, дата исполнения, стоимость заказа, название товара, цена, количество)", "О программе", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
         private void buttonOpen_SSV_Click(object sender, EventArgs e)
         {
-            openFileDialogTable_SSV.ShowDialog();
-            openFilePath = openFileDialogTable_SSV.FileName;
-
-            string[,] arrayValues = ds.LoadFromFileData(openFilePath);
-            dataGridViewTableOrders_SSV.ColumnCount = cols = arrayValues.GetLength(1);
-            dataGridViewTableOrders_SSV.RowCount = rows = arrayValues.GetLength(0);
-
-            for (int i = 0; i < rows; i++)
+            try
             {
-                for (int j = 0; j < cols; j++)
+                openFileDialogTable_SSV.ShowDialog();
+                openFilePath = openFileDialogTable_SSV.FileName;
+
+                string[,] arrayValues = ds.LoadFromFileData(openFilePath);
+                dataGridViewTableOrders_SSV.ColumnCount = cols = arrayValues.GetLength(1);
+                dataGridViewTableOrders_SSV.RowCount = rows = arrayValues.GetLength(0);
+
+                for (int i = 0; i < rows; i++)
                 {
-                    dataGridViewTableOrders_SSV.Rows[i].Cells[j].Value = arrayValues[i, j];
+                    for (int j = 0; j < cols; j++)
+                    {
+                        dataGridViewTableOrders_SSV.Rows[i].Cells[j].Value = arrayValues[i, j];
+                    }
                 }
+                if (dataGridViewTableOrders_SSV.Rows.Count != 0) { buttonRemoveRows_SSV.Enabled = true; }
             }
-            if (dataGridViewTableOrders_SSV.Rows.Count != 0) { buttonRemoveRows_SSV.Enabled = true; }
+            catch { }
         }
 
         private void buttonDownload_SSV_Click(object sender, EventArgs e)
@@ -148,7 +148,7 @@ namespace Project.V10
 
         private void button1_Click(object sender, EventArgs e)
         {
-            chart1.Series.Clear();
+            chartStats_SSV.Series.Clear();
             var series = new System.Windows.Forms.DataVisualization.Charting.Series("Популярность товаров");
             series.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
             foreach (DataGridViewRow row in this.dataGridViewTableOrders_SSV.Rows)
@@ -160,7 +160,7 @@ namespace Project.V10
                     series.Points.AddXY(label, hours);
                 }
             }
-            this.chart1.Series.Add(series);
+            this.chartStats_SSV.Series.Add(series);
         }
 
         private void toolStripMenuItemInstruction_SSV_Click(object sender, EventArgs e)
@@ -211,6 +211,60 @@ namespace Project.V10
                     }
                 }
             }
+        }
+
+        private void buttonGetProfit_SSV_Click(object sender, EventArgs e)
+        {
+            double sum = 0;
+            foreach (DataGridViewRow row in this.dataGridViewTableOrders_SSV.Rows)
+            {
+                if (!row.IsNewRow && row.Cells[2] != null && row.Cells[2].Value != null)
+                {
+                    sum += Convert.ToDouble(row.Cells[2].Value);
+                }
+            }
+            textBoxSum_SSV.Text = sum.ToString();
+        }
+
+        private void buttonGetAVG_SSV_Click(object sender, EventArgs e)
+        {
+            int count = 0;
+            double sum = 0;
+            foreach (DataGridViewRow row in this.dataGridViewTableOrders_SSV.Rows)
+            {
+                count += 1;
+                if (!row.IsNewRow && row.Cells[2] != null && row.Cells[2].Value != null)
+                {
+                    sum += Convert.ToDouble(row.Cells[2].Value);
+                }
+            }
+            textBoxAVG_SSV.Text = (sum/count).ToString();
+        }
+
+        private void buttonGetMinSum_SSV_Click(object sender, EventArgs e)
+        {
+            double min = double.MaxValue;
+            foreach (DataGridViewRow row in this.dataGridViewTableOrders_SSV.Rows)
+            {
+                if (!row.IsNewRow && row.Cells[2] != null && row.Cells[2].Value != null && min > Convert.ToDouble(row.Cells[2].Value))
+                {
+                    min = Convert.ToDouble(row.Cells[2].Value);
+                }
+            }
+            textBoxMinSum_SSV.Text = min.ToString();
+        }
+
+        private void buttonMaxSum_SSV_Click(object sender, EventArgs e)
+        {
+            double max = double.MinValue;
+            foreach (DataGridViewRow row in this.dataGridViewTableOrders_SSV.Rows)
+            {
+                if (!row.IsNewRow && row.Cells[2] != null && row.Cells[2].Value != null && max < Convert.ToDouble(row.Cells[2].Value))
+                {
+                    max = Convert.ToDouble(row.Cells[2].Value);
+                }
+            }
+            textBoxMaxSum_SSV.Text = max.ToString();
         }
 
         private void dataGridViewTable_SSV_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)

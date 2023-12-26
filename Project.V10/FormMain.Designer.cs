@@ -123,7 +123,7 @@
             this.Controls.Add(this.menuStrip_SSV);
             this.Name = "FormMain_SSV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormMain";
+            this.Text = "Вход";
             this.menuStrip_SSV.ResumeLayout(false);
             this.menuStrip_SSV.PerformLayout();
             this.ResumeLayout(false);
