@@ -111,10 +111,9 @@ namespace Project.V10
             if (colvo != "")
             {
                 colvo = (int.Parse(colvo) + 1).ToString();
+                formWorkers_SSV.AddRowToDataGridView(numberOrder, dateTimePickerOrderEnd_SSV.Text, textBoxLastPrice_SSV.Text, text, price, colvo);
+                formWorkers_SSV.buttonDownload_SSV();
             }
-            
-            formWorkers_SSV.AddRowToDataGridView(numberOrder, dateTimePickerOrderEnd_SSV.Text, textBoxLastPrice_SSV.Text, text, price, colvo);
-            formWorkers_SSV.buttonDownload_SSV();
         }
 
         private void numericUpDownTovar1_SSV_ValueChanged(object sender, EventArgs e)
