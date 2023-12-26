@@ -108,7 +108,10 @@ namespace Project.V10
             {
                 numberOrder = "0" + numberOrder;
             }
-            colvo = (int.Parse(colvo) + 1).ToString();
+            if (colvo != "")
+            {
+                colvo = (int.Parse(colvo) + 1).ToString();
+            }
             
             formWorkers_SSV.AddRowToDataGridView(numberOrder, dateTimePickerOrderEnd_SSV.Text, textBoxLastPrice_SSV.Text, text, price, colvo);
             formWorkers_SSV.buttonDownload_SSV();
