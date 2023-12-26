@@ -161,6 +161,7 @@ namespace Project.V10
             }
         }
 
+
         private void comboBoxColsNames_SSV_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBoxColsNames_SSV.SelectedIndex != 0)
