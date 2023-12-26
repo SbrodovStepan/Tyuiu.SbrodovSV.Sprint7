@@ -18,10 +18,8 @@ namespace Project.V10
             InitializeComponent();
         }
         decimal sum = 0;
-        public FormClients_SSV(FormMain_SSV formMain_SSV)
-        {
-            InitializeComponent();
-        }
+        int last1 = 0, last2 = 0, last3 = 0;
+        string text = "", price = "", colvo = "";
         private void toolStripMenuItemExit_SSV_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -39,75 +37,81 @@ namespace Project.V10
             formInstruction.ShowDialog();
         }
 
-        private void checkBoxTovar1_SSV_CheckedChanged(object sender, EventArgs e)
+        private void radioButtonTovar1_SSV_CheckedChanged(object sender, EventArgs e)
         {
-            switch (checkBoxTovar1_SSV.CheckState)
+            if (radioButtonTovar1_SSV.Checked == true)
             {
-                case CheckState.Checked:
-                    numericUpDownTovar1_SSV.Enabled = true;
-                    sum += 30000 * numericUpDownTovar1_SSV.Value;
-                    textBoxLastPrice_SSV.Text = sum.ToString();
-                    break;
-                case CheckState.Unchecked:
-                    numericUpDownTovar1_SSV.Enabled = false;
-                    sum -= 30000 * numericUpDownTovar1_SSV.Value;
-                    textBoxLastPrice_SSV.Text = sum.ToString();
-                    break;
-                case CheckState.Indeterminate:  
-                    break;
+                numericUpDownTovar1_SSV.Enabled = true;
+                sum += 30000 * numericUpDownTovar1_SSV.Value;
+                textBoxLastPrice_SSV.Text = sum.ToString();
+                text = radioButtonTovar1_SSV.Text;
+                price = textBoxPrice1_SSV.Text;
+            }
+            else
+            {
+                numericUpDownTovar1_SSV.Enabled = false;
+                sum -= 30000 * numericUpDownTovar1_SSV.Value;
+                textBoxLastPrice_SSV.Text = sum.ToString();
             }
         }
 
-        private void checkBoxTovar2_SSV_CheckedChanged(object sender, EventArgs e)
+        private void radioButtonTovar2_SSV_CheckedChanged(object sender, EventArgs e)
         {
-            switch (checkBoxTovar2_SSV.CheckState)
+            if (radioButtonTovar2_SSV.Checked == true)
             {
-                case CheckState.Checked:
-                    numericUpDownTovar2_SSV.Enabled = true;
-                    sum += 16000 * numericUpDownTovar2_SSV.Value;
-                    textBoxLastPrice_SSV.Text = sum.ToString();
-                    break;
-                case CheckState.Unchecked:
-                    numericUpDownTovar2_SSV.Enabled = false;
-                    sum -= 16000 * numericUpDownTovar2_SSV.Value;
-                    textBoxLastPrice_SSV.Text = sum.ToString();
-                    break;
-                case CheckState.Indeterminate:
-                    break;
+                numericUpDownTovar2_SSV.Enabled = true;
+                sum += 16000 * numericUpDownTovar2_SSV.Value;
+                textBoxLastPrice_SSV.Text = sum.ToString();
+                text = radioButtonTovar2_SSV.Text;
+                price = textBoxPrice2_SSV.Text;
+            }
+            else
+            {
+                numericUpDownTovar2_SSV.Enabled = false;
+                sum -= 16000 * numericUpDownTovar2_SSV.Value;
+                textBoxLastPrice_SSV.Text = sum.ToString();
             }
         }
 
-        private void checkBoxTovar3_SSV_CheckedChanged(object sender, EventArgs e)
+        private void radioButtonTovar3_SSV_CheckedChanged(object sender, EventArgs e)
         {
-            switch (checkBoxTovar3_SSV.CheckState)
+            if (radioButtonTovar3_SSV.Checked == true)
             {
-                case CheckState.Checked:
-                    numericUpDownTovar3_SSV.Enabled = true;
-                    sum += 600 * numericUpDownTovar3_SSV.Value;
-                    textBoxLastPrice_SSV.Text = sum.ToString();
-                    break;
-                case CheckState.Unchecked:
-                    numericUpDownTovar3_SSV.Enabled = false;
-                    sum -= 600 * numericUpDownTovar3_SSV.Value;
-                    textBoxLastPrice_SSV.Text = sum.ToString();
-                    break;
-                case CheckState.Indeterminate:
-                    break;
+                numericUpDownTovar3_SSV.Enabled = true;
+                sum += 600 * numericUpDownTovar3_SSV.Value;
+                textBoxLastPrice_SSV.Text = sum.ToString();
+                text = radioButtonTovar3_SSV.Text;
+                price = textBoxPrice3_SSV.Text;
+            }
+            else
+            {
+                numericUpDownTovar3_SSV.Enabled = false;
+                sum -= 600 * numericUpDownTovar3_SSV.Value;
+                textBoxLastPrice_SSV.Text = sum.ToString();
             }
         }
-        int last1 = 0, last2 = 0, last3 = 0;
 
         private void numericUpDownTovar3_SSV_ValueChanged(object sender, EventArgs e)
         {
             sum = numericUpDownTovar3_SSV.Value > last3 ? sum + 600 : sum - 600;
             textBoxLastPrice_SSV.Text = sum.ToString();
-            last3 = (int)numericUpDownTovar2_SSV.Value;
+            last3 = (int)numericUpDownTovar3_SSV.Value;
+            colvo = numericUpDownTovar3_SSV.Text;
         }
 
         private void buttonDoOrder_SSV_Click(object sender, EventArgs e)
         {
             FormWorkers_SSV formWorkers_SSV = new FormWorkers_SSV();
+            Random random = new Random();
+            string numberOrder = random.Next(00000000,99999999).ToString();
+            while (numberOrder.Length < 8)
+            {
+                numberOrder = "0" + numberOrder;
+            }
+            colvo = (int.Parse(colvo) + 1).ToString();
             
+            formWorkers_SSV.AddRowToDataGridView(numberOrder, dateTimePickerOrderEnd_SSV.Text, textBoxLastPrice_SSV.Text, text, price, colvo);
+            formWorkers_SSV.buttonDownload_SSV();
         }
 
         private void numericUpDownTovar1_SSV_ValueChanged(object sender, EventArgs e)
@@ -115,6 +119,7 @@ namespace Project.V10
             sum = numericUpDownTovar1_SSV.Value > last1 ? sum + 30000 : sum - 30000;
             textBoxLastPrice_SSV.Text = sum.ToString();
             last1 = (int)numericUpDownTovar1_SSV.Value;
+            colvo = numericUpDownTovar1_SSV.Text;
         }
 
         private void numericUpDownTovar2_SSV_ValueChanged(object sender, EventArgs e)
@@ -122,6 +127,7 @@ namespace Project.V10
             sum = numericUpDownTovar2_SSV.Value > last2 ? sum + 16000 : sum - 16000;
             textBoxLastPrice_SSV.Text = sum.ToString();
             last2 = (int)numericUpDownTovar2_SSV.Value;
+            colvo = numericUpDownTovar2_SSV.Text;
         }
     }
 }

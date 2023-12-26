@@ -29,11 +29,8 @@
         private void InitializeComponent()
         {
             this.numericUpDownTovar1_SSV = new System.Windows.Forms.NumericUpDown();
-            this.checkBoxTovar1_SSV = new System.Windows.Forms.CheckBox();
             this.numericUpDownTovar2_SSV = new System.Windows.Forms.NumericUpDown();
-            this.checkBoxTovar2_SSV = new System.Windows.Forms.CheckBox();
             this.numericUpDownTovar3_SSV = new System.Windows.Forms.NumericUpDown();
-            this.checkBoxTovar3_SSV = new System.Windows.Forms.CheckBox();
             this.menuStrip_SSV = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItemInfo_SSV = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemInstruction_SSV = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,6 +47,9 @@
             this.labelTovar_SSV = new System.Windows.Forms.Label();
             this.labelPrice_SSV = new System.Windows.Forms.Label();
             this.labelKolvo_SSV = new System.Windows.Forms.Label();
+            this.radioButtonTovar1_SSV = new System.Windows.Forms.RadioButton();
+            this.radioButtonTovar2_SSV = new System.Windows.Forms.RadioButton();
+            this.radioButtonTovar3_SSV = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTovar1_SSV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTovar2_SSV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTovar3_SSV)).BeginInit();
@@ -65,17 +65,6 @@
             this.numericUpDownTovar1_SSV.TabIndex = 1;
             this.numericUpDownTovar1_SSV.ValueChanged += new System.EventHandler(this.numericUpDownTovar1_SSV_ValueChanged);
             // 
-            // checkBoxTovar1_SSV
-            // 
-            this.checkBoxTovar1_SSV.AutoSize = true;
-            this.checkBoxTovar1_SSV.Location = new System.Drawing.Point(12, 55);
-            this.checkBoxTovar1_SSV.Name = "checkBoxTovar1_SSV";
-            this.checkBoxTovar1_SSV.Size = new System.Drawing.Size(68, 17);
-            this.checkBoxTovar1_SSV.TabIndex = 2;
-            this.checkBoxTovar1_SSV.Text = "СУ-2106";
-            this.checkBoxTovar1_SSV.UseVisualStyleBackColor = true;
-            this.checkBoxTovar1_SSV.CheckedChanged += new System.EventHandler(this.checkBoxTovar1_SSV_CheckedChanged);
-            // 
             // numericUpDownTovar2_SSV
             // 
             this.numericUpDownTovar2_SSV.Enabled = false;
@@ -84,17 +73,6 @@
             this.numericUpDownTovar2_SSV.Size = new System.Drawing.Size(66, 20);
             this.numericUpDownTovar2_SSV.TabIndex = 1;
             this.numericUpDownTovar2_SSV.ValueChanged += new System.EventHandler(this.numericUpDownTovar2_SSV_ValueChanged);
-            // 
-            // checkBoxTovar2_SSV
-            // 
-            this.checkBoxTovar2_SSV.AutoSize = true;
-            this.checkBoxTovar2_SSV.Location = new System.Drawing.Point(12, 78);
-            this.checkBoxTovar2_SSV.Name = "checkBoxTovar2_SSV";
-            this.checkBoxTovar2_SSV.Size = new System.Drawing.Size(104, 17);
-            this.checkBoxTovar2_SSV.TabIndex = 2;
-            this.checkBoxTovar2_SSV.Text = "Зимняя резина";
-            this.checkBoxTovar2_SSV.UseVisualStyleBackColor = true;
-            this.checkBoxTovar2_SSV.CheckedChanged += new System.EventHandler(this.checkBoxTovar2_SSV_CheckedChanged);
             // 
             // numericUpDownTovar3_SSV
             // 
@@ -105,17 +83,6 @@
             this.numericUpDownTovar3_SSV.TabIndex = 1;
             this.numericUpDownTovar3_SSV.ValueChanged += new System.EventHandler(this.numericUpDownTovar3_SSV_ValueChanged);
             // 
-            // checkBoxTovar3_SSV
-            // 
-            this.checkBoxTovar3_SSV.AutoSize = true;
-            this.checkBoxTovar3_SSV.Location = new System.Drawing.Point(12, 101);
-            this.checkBoxTovar3_SSV.Name = "checkBoxTovar3_SSV";
-            this.checkBoxTovar3_SSV.Size = new System.Drawing.Size(56, 17);
-            this.checkBoxTovar3_SSV.TabIndex = 2;
-            this.checkBoxTovar3_SSV.Text = "Свечи";
-            this.checkBoxTovar3_SSV.UseVisualStyleBackColor = true;
-            this.checkBoxTovar3_SSV.CheckedChanged += new System.EventHandler(this.checkBoxTovar3_SSV_CheckedChanged);
-            // 
             // menuStrip_SSV
             // 
             this.menuStrip_SSV.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -123,7 +90,7 @@
             this.toolStripMenuItemExit_SSV});
             this.menuStrip_SSV.Location = new System.Drawing.Point(0, 0);
             this.menuStrip_SSV.Name = "menuStrip_SSV";
-            this.menuStrip_SSV.Size = new System.Drawing.Size(534, 24);
+            this.menuStrip_SSV.Size = new System.Drawing.Size(249, 24);
             this.menuStrip_SSV.TabIndex = 6;
             this.menuStrip_SSV.Text = "menuStrip1";
             // 
@@ -173,9 +140,12 @@
             // 
             this.dateTimePickerOrderEnd_SSV.Location = new System.Drawing.Point(11, 181);
             this.dateTimePickerOrderEnd_SSV.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePickerOrderEnd_SSV.MaxDate = new System.DateTime(2024, 12, 26, 0, 0, 0, 0);
+            this.dateTimePickerOrderEnd_SSV.MinDate = new System.DateTime(2023, 12, 26, 0, 0, 0, 0);
             this.dateTimePickerOrderEnd_SSV.Name = "dateTimePickerOrderEnd_SSV";
             this.dateTimePickerOrderEnd_SSV.Size = new System.Drawing.Size(227, 20);
             this.dateTimePickerOrderEnd_SSV.TabIndex = 7;
+            this.dateTimePickerOrderEnd_SSV.Value = new System.DateTime(2023, 12, 26, 0, 0, 0, 0);
             // 
             // textBoxPrice1_SSV
             // 
@@ -188,7 +158,7 @@
             // 
             // textBoxPrice2_SSV
             // 
-            this.textBoxPrice2_SSV.Location = new System.Drawing.Point(122, 76);
+            this.textBoxPrice2_SSV.Location = new System.Drawing.Point(122, 78);
             this.textBoxPrice2_SSV.Name = "textBoxPrice2_SSV";
             this.textBoxPrice2_SSV.ReadOnly = true;
             this.textBoxPrice2_SSV.Size = new System.Drawing.Size(41, 20);
@@ -258,11 +228,50 @@
             this.labelKolvo_SSV.TabIndex = 12;
             this.labelKolvo_SSV.Text = "Количество";
             // 
+            // radioButtonTovar1_SSV
+            // 
+            this.radioButtonTovar1_SSV.AutoSize = true;
+            this.radioButtonTovar1_SSV.Location = new System.Drawing.Point(11, 55);
+            this.radioButtonTovar1_SSV.Name = "radioButtonTovar1_SSV";
+            this.radioButtonTovar1_SSV.Size = new System.Drawing.Size(67, 17);
+            this.radioButtonTovar1_SSV.TabIndex = 13;
+            this.radioButtonTovar1_SSV.TabStop = true;
+            this.radioButtonTovar1_SSV.Text = "СУ-2106";
+            this.radioButtonTovar1_SSV.UseVisualStyleBackColor = true;
+            this.radioButtonTovar1_SSV.CheckedChanged += new System.EventHandler(this.radioButtonTovar1_SSV_CheckedChanged);
+            // 
+            // radioButtonTovar2_SSV
+            // 
+            this.radioButtonTovar2_SSV.AutoSize = true;
+            this.radioButtonTovar2_SSV.Location = new System.Drawing.Point(11, 78);
+            this.radioButtonTovar2_SSV.Name = "radioButtonTovar2_SSV";
+            this.radioButtonTovar2_SSV.Size = new System.Drawing.Size(67, 17);
+            this.radioButtonTovar2_SSV.TabIndex = 13;
+            this.radioButtonTovar2_SSV.TabStop = true;
+            this.radioButtonTovar2_SSV.Text = "Роберто";
+            this.radioButtonTovar2_SSV.UseVisualStyleBackColor = true;
+            this.radioButtonTovar2_SSV.CheckedChanged += new System.EventHandler(this.radioButtonTovar2_SSV_CheckedChanged);
+            // 
+            // radioButtonTovar3_SSV
+            // 
+            this.radioButtonTovar3_SSV.AutoSize = true;
+            this.radioButtonTovar3_SSV.Location = new System.Drawing.Point(11, 102);
+            this.radioButtonTovar3_SSV.Name = "radioButtonTovar3_SSV";
+            this.radioButtonTovar3_SSV.Size = new System.Drawing.Size(89, 17);
+            this.radioButtonTovar3_SSV.TabIndex = 13;
+            this.radioButtonTovar3_SSV.TabStop = true;
+            this.radioButtonTovar3_SSV.Text = "Вкусный чай";
+            this.radioButtonTovar3_SSV.UseVisualStyleBackColor = true;
+            this.radioButtonTovar3_SSV.CheckedChanged += new System.EventHandler(this.radioButtonTovar3_SSV_CheckedChanged);
+            // 
             // FormClients_SSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 342);
+            this.ClientSize = new System.Drawing.Size(249, 254);
+            this.Controls.Add(this.radioButtonTovar3_SSV);
+            this.Controls.Add(this.radioButtonTovar2_SSV);
+            this.Controls.Add(this.radioButtonTovar1_SSV);
             this.Controls.Add(this.labelKolvo_SSV);
             this.Controls.Add(this.labelPrice_SSV);
             this.Controls.Add(this.labelTovar_SSV);
@@ -275,11 +284,8 @@
             this.Controls.Add(this.labelDate_SSV);
             this.Controls.Add(this.dateTimePickerOrderEnd_SSV);
             this.Controls.Add(this.menuStrip_SSV);
-            this.Controls.Add(this.checkBoxTovar3_SSV);
             this.Controls.Add(this.numericUpDownTovar3_SSV);
-            this.Controls.Add(this.checkBoxTovar2_SSV);
             this.Controls.Add(this.numericUpDownTovar2_SSV);
-            this.Controls.Add(this.checkBoxTovar1_SSV);
             this.Controls.Add(this.numericUpDownTovar1_SSV);
             this.Name = "FormClients_SSV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -297,11 +303,8 @@
         #endregion
 
         private System.Windows.Forms.NumericUpDown numericUpDownTovar1_SSV;
-        private System.Windows.Forms.CheckBox checkBoxTovar1_SSV;
         private System.Windows.Forms.NumericUpDown numericUpDownTovar2_SSV;
-        private System.Windows.Forms.CheckBox checkBoxTovar2_SSV;
         private System.Windows.Forms.NumericUpDown numericUpDownTovar3_SSV;
-        private System.Windows.Forms.CheckBox checkBoxTovar3_SSV;
         private System.Windows.Forms.MenuStrip menuStrip_SSV;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemInfo_SSV;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemInstruction_SSV;
@@ -318,5 +321,8 @@
         private System.Windows.Forms.Label labelTovar_SSV;
         private System.Windows.Forms.Label labelPrice_SSV;
         private System.Windows.Forms.Label labelKolvo_SSV;
+        private System.Windows.Forms.RadioButton radioButtonTovar1_SSV;
+        private System.Windows.Forms.RadioButton radioButtonTovar2_SSV;
+        private System.Windows.Forms.RadioButton radioButtonTovar3_SSV;
     }
 }

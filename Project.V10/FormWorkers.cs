@@ -20,11 +20,6 @@ namespace Project.V10
         {
             InitializeComponent();
         }
-
-        public FormWorkers_SSV(FormMain_SSV formMain_SSV)
-        {
-            InitializeComponent();
-        }
         DataService ds = new DataService();
         string openFilePath;
         int cols, rows;
@@ -90,6 +85,39 @@ namespace Project.V10
 
         }
 
+        public void buttonDownload_SSV()
+        {
+            string path = $@"{Directory.GetCurrentDirectory()}\DataBase.csv";
+
+            FileInfo fileInfo = new FileInfo(path);
+            bool fileExists = fileInfo.Exists;
+            if (fileExists)
+            {
+                File.Delete(path);
+            }
+            int rows = dataGridViewTableOrders_SSV.RowCount;
+            int columns = dataGridViewTableOrders_SSV.ColumnCount;
+            string str = "";
+
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    if (j != columns - 1)
+                    {
+                        str = str + dataGridViewTableOrders_SSV.Rows[i].Cells[j].Value + ";";
+                    }
+                    else
+                    {
+                        str = str + dataGridViewTableOrders_SSV.Rows[i].Cells[j].Value;
+                    }
+                }
+                File.AppendAllText(path, str + Environment.NewLine);
+                str = "";
+            }
+
+        }
+
 
         private void buttonAdd_SSV_Click(object sender, EventArgs e)
         {
@@ -117,6 +145,7 @@ namespace Project.V10
 
         private void buttonFilter_SSV_Click(object sender, EventArgs e)
         {
+            comboBoxColsNames_SSV.GetItemText(comboBoxColsNames_SSV.SelectedIndex);
             foreach (DataGridViewRow r in dataGridViewTableOrders_SSV.Rows)
             {
                 if ((r.Cells[comboBoxColsNames_SSV.SelectedIndex - 1].Value).ToString().ToUpper().Contains(textBoxFilter_SSV.Text.ToUpper()))
@@ -265,6 +294,55 @@ namespace Project.V10
                 }
             }
             textBoxMaxSum_SSV.Text = max.ToString();
+        }
+        public void AddRowToDataGridView(string value1, string value2, string value3, string value4, string value5, string value6)
+        {
+            try
+            {
+                openFilePath = $@"{Directory.GetCurrentDirectory()}\DataBase.csv";
+
+                string[,] arrayValues = ds.LoadFromFileData(openFilePath);
+                dataGridViewTableOrders_SSV.ColumnCount = cols = arrayValues.GetLength(1);
+                dataGridViewTableOrders_SSV.RowCount = rows = arrayValues.GetLength(0);
+
+                for (int i = 0; i < rows; i++)
+                {
+                    for (int j = 0; j < cols; j++)
+                    {
+                        dataGridViewTableOrders_SSV.Rows[i].Cells[j].Value = arrayValues[i, j];
+                    }
+                }
+                if (dataGridViewTableOrders_SSV.Rows.Count != 0) { buttonRemoveRows_SSV.Enabled = true; }
+                dataGridViewTableOrders_SSV.Rows.Add(value1, value2, value3, value4, value5, value6);
+            }
+            catch { dataGridViewTableOrders_SSV.Rows.Add(value1, value2, value3, value4, value5, value6); }
+        }
+
+        private void FormWorkers_SSV_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                openFilePath = $@"{Directory.GetCurrentDirectory()}\DataBase.csv";
+
+                string[,] arrayValues = ds.LoadFromFileData(openFilePath);
+                dataGridViewTableOrders_SSV.ColumnCount = cols = arrayValues.GetLength(1);
+                dataGridViewTableOrders_SSV.RowCount = rows = arrayValues.GetLength(0);
+
+                for (int i = 0; i < rows; i++)
+                {
+                    for (int j = 0; j < cols; j++)
+                    {
+                        dataGridViewTableOrders_SSV.Rows[i].Cells[j].Value = arrayValues[i, j];
+                    }
+                }
+                if (dataGridViewTableOrders_SSV.Rows.Count != 0) { buttonRemoveRows_SSV.Enabled = true; }
+            }
+            catch { };
+        }
+
+        private void FormWorkers_SSV_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            buttonDownload_SSV();
         }
 
         private void dataGridViewTable_SSV_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)

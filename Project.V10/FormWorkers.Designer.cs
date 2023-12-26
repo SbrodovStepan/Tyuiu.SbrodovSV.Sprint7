@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.saveFileDialogTable_SSV = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialogTable_SSV = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip_SSV = new System.Windows.Forms.MenuStrip();
@@ -45,6 +45,14 @@
             this.toolStripMenuItemAbout_SSV = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemExit_SSV = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPageStats_SSV = new System.Windows.Forms.TabPage();
+            this.textBoxSum_SSV = new System.Windows.Forms.TextBox();
+            this.textBoxMaxSum_SSV = new System.Windows.Forms.TextBox();
+            this.textBoxAVG_SSV = new System.Windows.Forms.TextBox();
+            this.textBoxMinSum_SSV = new System.Windows.Forms.TextBox();
+            this.buttonMaxSum_SSV = new System.Windows.Forms.Button();
+            this.buttonGetMinSum_SSV = new System.Windows.Forms.Button();
+            this.buttonGetAVG_SSV = new System.Windows.Forms.Button();
+            this.buttonGetProfit_SSV = new System.Windows.Forms.Button();
             this.buttonGetStats_SSV = new System.Windows.Forms.Button();
             this.chartStats_SSV = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPageOrderData_SSV = new System.Windows.Forms.TabPage();
@@ -68,14 +76,6 @@
             this.buttonAddOrders_SSV = new System.Windows.Forms.Button();
             this.buttonDownloadOrders_SSV = new System.Windows.Forms.Button();
             this.tabControl_SSV = new System.Windows.Forms.TabControl();
-            this.buttonGetProfit_SSV = new System.Windows.Forms.Button();
-            this.buttonGetAVG_SSV = new System.Windows.Forms.Button();
-            this.buttonGetMinSum_SSV = new System.Windows.Forms.Button();
-            this.buttonMaxSum_SSV = new System.Windows.Forms.Button();
-            this.textBoxMinSum_SSV = new System.Windows.Forms.TextBox();
-            this.textBoxMaxSum_SSV = new System.Windows.Forms.TextBox();
-            this.textBoxAVG_SSV = new System.Windows.Forms.TextBox();
-            this.textBoxSum_SSV = new System.Windows.Forms.TextBox();
             this.menuStrip_SSV.SuspendLayout();
             this.tabPageStats_SSV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartStats_SSV)).BeginInit();
@@ -197,6 +197,74 @@
             this.tabPageStats_SSV.Text = "Статистика";
             this.tabPageStats_SSV.UseVisualStyleBackColor = true;
             // 
+            // textBoxSum_SSV
+            // 
+            this.textBoxSum_SSV.Location = new System.Drawing.Point(665, 252);
+            this.textBoxSum_SSV.Name = "textBoxSum_SSV";
+            this.textBoxSum_SSV.Size = new System.Drawing.Size(170, 20);
+            this.textBoxSum_SSV.TabIndex = 2;
+            // 
+            // textBoxMaxSum_SSV
+            // 
+            this.textBoxMaxSum_SSV.Location = new System.Drawing.Point(665, 158);
+            this.textBoxMaxSum_SSV.Name = "textBoxMaxSum_SSV";
+            this.textBoxMaxSum_SSV.Size = new System.Drawing.Size(170, 20);
+            this.textBoxMaxSum_SSV.TabIndex = 2;
+            // 
+            // textBoxAVG_SSV
+            // 
+            this.textBoxAVG_SSV.Location = new System.Drawing.Point(489, 252);
+            this.textBoxAVG_SSV.Name = "textBoxAVG_SSV";
+            this.textBoxAVG_SSV.Size = new System.Drawing.Size(170, 20);
+            this.textBoxAVG_SSV.TabIndex = 2;
+            // 
+            // textBoxMinSum_SSV
+            // 
+            this.textBoxMinSum_SSV.Location = new System.Drawing.Point(489, 158);
+            this.textBoxMinSum_SSV.Name = "textBoxMinSum_SSV";
+            this.textBoxMinSum_SSV.Size = new System.Drawing.Size(170, 20);
+            this.textBoxMinSum_SSV.TabIndex = 2;
+            // 
+            // buttonMaxSum_SSV
+            // 
+            this.buttonMaxSum_SSV.Location = new System.Drawing.Point(665, 184);
+            this.buttonMaxSum_SSV.Name = "buttonMaxSum_SSV";
+            this.buttonMaxSum_SSV.Size = new System.Drawing.Size(170, 39);
+            this.buttonMaxSum_SSV.TabIndex = 1;
+            this.buttonMaxSum_SSV.Text = "Узнать максимальную сумму заказа";
+            this.buttonMaxSum_SSV.UseVisualStyleBackColor = true;
+            this.buttonMaxSum_SSV.Click += new System.EventHandler(this.buttonMaxSum_SSV_Click);
+            // 
+            // buttonGetMinSum_SSV
+            // 
+            this.buttonGetMinSum_SSV.Location = new System.Drawing.Point(489, 184);
+            this.buttonGetMinSum_SSV.Name = "buttonGetMinSum_SSV";
+            this.buttonGetMinSum_SSV.Size = new System.Drawing.Size(170, 39);
+            this.buttonGetMinSum_SSV.TabIndex = 1;
+            this.buttonGetMinSum_SSV.Text = "Узнать минимальную сумму заказа";
+            this.buttonGetMinSum_SSV.UseVisualStyleBackColor = true;
+            this.buttonGetMinSum_SSV.Click += new System.EventHandler(this.buttonGetMinSum_SSV_Click);
+            // 
+            // buttonGetAVG_SSV
+            // 
+            this.buttonGetAVG_SSV.Location = new System.Drawing.Point(489, 278);
+            this.buttonGetAVG_SSV.Name = "buttonGetAVG_SSV";
+            this.buttonGetAVG_SSV.Size = new System.Drawing.Size(170, 39);
+            this.buttonGetAVG_SSV.TabIndex = 1;
+            this.buttonGetAVG_SSV.Text = "Узнать среднюю цену заказа\r\n";
+            this.buttonGetAVG_SSV.UseVisualStyleBackColor = true;
+            this.buttonGetAVG_SSV.Click += new System.EventHandler(this.buttonGetAVG_SSV_Click);
+            // 
+            // buttonGetProfit_SSV
+            // 
+            this.buttonGetProfit_SSV.Location = new System.Drawing.Point(665, 278);
+            this.buttonGetProfit_SSV.Name = "buttonGetProfit_SSV";
+            this.buttonGetProfit_SSV.Size = new System.Drawing.Size(170, 39);
+            this.buttonGetProfit_SSV.TabIndex = 1;
+            this.buttonGetProfit_SSV.Text = "Узнать сумму выручки\r\n";
+            this.buttonGetProfit_SSV.UseVisualStyleBackColor = true;
+            this.buttonGetProfit_SSV.Click += new System.EventHandler(this.buttonGetProfit_SSV_Click);
+            // 
             // buttonGetStats_SSV
             // 
             this.buttonGetStats_SSV.Location = new System.Drawing.Point(489, 17);
@@ -209,17 +277,17 @@
             // 
             // chartStats_SSV
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chartStats_SSV.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartStats_SSV.Legends.Add(legend3);
+            chartArea4.Name = "ChartArea1";
+            this.chartStats_SSV.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartStats_SSV.Legends.Add(legend4);
             this.chartStats_SSV.Location = new System.Drawing.Point(8, 3);
             this.chartStats_SSV.Name = "chartStats_SSV";
-            series3.ChartArea = "ChartArea1";
-            series3.IsVisibleInLegend = false;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chartStats_SSV.Series.Add(series3);
+            series4.ChartArea = "ChartArea1";
+            series4.IsVisibleInLegend = false;
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chartStats_SSV.Series.Add(series4);
             this.chartStats_SSV.Size = new System.Drawing.Size(475, 327);
             this.chartStats_SSV.TabIndex = 0;
             this.chartStats_SSV.Text = "chart1";
@@ -448,74 +516,6 @@
             this.tabControl_SSV.Size = new System.Drawing.Size(956, 378);
             this.tabControl_SSV.TabIndex = 3;
             // 
-            // buttonGetProfit_SSV
-            // 
-            this.buttonGetProfit_SSV.Location = new System.Drawing.Point(665, 278);
-            this.buttonGetProfit_SSV.Name = "buttonGetProfit_SSV";
-            this.buttonGetProfit_SSV.Size = new System.Drawing.Size(170, 39);
-            this.buttonGetProfit_SSV.TabIndex = 1;
-            this.buttonGetProfit_SSV.Text = "Узнать сумму выручки\r\n";
-            this.buttonGetProfit_SSV.UseVisualStyleBackColor = true;
-            this.buttonGetProfit_SSV.Click += new System.EventHandler(this.buttonGetProfit_SSV_Click);
-            // 
-            // buttonGetAVG_SSV
-            // 
-            this.buttonGetAVG_SSV.Location = new System.Drawing.Point(489, 278);
-            this.buttonGetAVG_SSV.Name = "buttonGetAVG_SSV";
-            this.buttonGetAVG_SSV.Size = new System.Drawing.Size(170, 39);
-            this.buttonGetAVG_SSV.TabIndex = 1;
-            this.buttonGetAVG_SSV.Text = "Узнать среднюю цену заказа\r\n";
-            this.buttonGetAVG_SSV.UseVisualStyleBackColor = true;
-            this.buttonGetAVG_SSV.Click += new System.EventHandler(this.buttonGetAVG_SSV_Click);
-            // 
-            // buttonGetMinSum_SSV
-            // 
-            this.buttonGetMinSum_SSV.Location = new System.Drawing.Point(489, 184);
-            this.buttonGetMinSum_SSV.Name = "buttonGetMinSum_SSV";
-            this.buttonGetMinSum_SSV.Size = new System.Drawing.Size(170, 39);
-            this.buttonGetMinSum_SSV.TabIndex = 1;
-            this.buttonGetMinSum_SSV.Text = "Узнать минимальную сумму заказа";
-            this.buttonGetMinSum_SSV.UseVisualStyleBackColor = true;
-            this.buttonGetMinSum_SSV.Click += new System.EventHandler(this.buttonGetMinSum_SSV_Click);
-            // 
-            // buttonMaxSum_SSV
-            // 
-            this.buttonMaxSum_SSV.Location = new System.Drawing.Point(665, 184);
-            this.buttonMaxSum_SSV.Name = "buttonMaxSum_SSV";
-            this.buttonMaxSum_SSV.Size = new System.Drawing.Size(170, 39);
-            this.buttonMaxSum_SSV.TabIndex = 1;
-            this.buttonMaxSum_SSV.Text = "Узнать максимальную сумму заказа";
-            this.buttonMaxSum_SSV.UseVisualStyleBackColor = true;
-            this.buttonMaxSum_SSV.Click += new System.EventHandler(this.buttonMaxSum_SSV_Click);
-            // 
-            // textBoxMinSum_SSV
-            // 
-            this.textBoxMinSum_SSV.Location = new System.Drawing.Point(489, 158);
-            this.textBoxMinSum_SSV.Name = "textBoxMinSum_SSV";
-            this.textBoxMinSum_SSV.Size = new System.Drawing.Size(170, 20);
-            this.textBoxMinSum_SSV.TabIndex = 2;
-            // 
-            // textBoxMaxSum_SSV
-            // 
-            this.textBoxMaxSum_SSV.Location = new System.Drawing.Point(665, 158);
-            this.textBoxMaxSum_SSV.Name = "textBoxMaxSum_SSV";
-            this.textBoxMaxSum_SSV.Size = new System.Drawing.Size(170, 20);
-            this.textBoxMaxSum_SSV.TabIndex = 2;
-            // 
-            // textBoxAVG_SSV
-            // 
-            this.textBoxAVG_SSV.Location = new System.Drawing.Point(489, 252);
-            this.textBoxAVG_SSV.Name = "textBoxAVG_SSV";
-            this.textBoxAVG_SSV.Size = new System.Drawing.Size(170, 20);
-            this.textBoxAVG_SSV.TabIndex = 2;
-            // 
-            // textBoxSum_SSV
-            // 
-            this.textBoxSum_SSV.Location = new System.Drawing.Point(665, 252);
-            this.textBoxSum_SSV.Name = "textBoxSum_SSV";
-            this.textBoxSum_SSV.Size = new System.Drawing.Size(170, 20);
-            this.textBoxSum_SSV.TabIndex = 2;
-            // 
             // FormWorkers_SSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -527,6 +527,8 @@
             this.Name = "FormWorkers_SSV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Окно работника";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormWorkers_SSV_FormClosed);
+            this.Load += new System.EventHandler(this.FormWorkers_SSV_Load);
             this.menuStrip_SSV.ResumeLayout(false);
             this.menuStrip_SSV.PerformLayout();
             this.tabPageStats_SSV.ResumeLayout(false);
