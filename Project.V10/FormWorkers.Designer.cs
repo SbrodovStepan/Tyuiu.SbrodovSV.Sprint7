@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.saveFileDialogTable_SSV = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialogTable_SSV = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip_SSV = new System.Windows.Forms.MenuStrip();
@@ -213,6 +213,7 @@
             // 
             this.textBoxSum_SSV.Location = new System.Drawing.Point(665, 252);
             this.textBoxSum_SSV.Name = "textBoxSum_SSV";
+            this.textBoxSum_SSV.ReadOnly = true;
             this.textBoxSum_SSV.Size = new System.Drawing.Size(170, 20);
             this.textBoxSum_SSV.TabIndex = 2;
             // 
@@ -220,6 +221,7 @@
             // 
             this.textBoxMaxSum_SSV.Location = new System.Drawing.Point(665, 158);
             this.textBoxMaxSum_SSV.Name = "textBoxMaxSum_SSV";
+            this.textBoxMaxSum_SSV.ReadOnly = true;
             this.textBoxMaxSum_SSV.Size = new System.Drawing.Size(170, 20);
             this.textBoxMaxSum_SSV.TabIndex = 2;
             // 
@@ -227,6 +229,7 @@
             // 
             this.textBoxAVG_SSV.Location = new System.Drawing.Point(489, 252);
             this.textBoxAVG_SSV.Name = "textBoxAVG_SSV";
+            this.textBoxAVG_SSV.ReadOnly = true;
             this.textBoxAVG_SSV.Size = new System.Drawing.Size(170, 20);
             this.textBoxAVG_SSV.TabIndex = 2;
             // 
@@ -234,6 +237,7 @@
             // 
             this.textBoxMinSum_SSV.Location = new System.Drawing.Point(489, 158);
             this.textBoxMinSum_SSV.Name = "textBoxMinSum_SSV";
+            this.textBoxMinSum_SSV.ReadOnly = true;
             this.textBoxMinSum_SSV.Size = new System.Drawing.Size(170, 20);
             this.textBoxMinSum_SSV.TabIndex = 2;
             // 
@@ -294,17 +298,17 @@
             // 
             // chartStats_SSV
             // 
-            chartArea5.Name = "ChartArea1";
-            this.chartStats_SSV.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chartStats_SSV.Legends.Add(legend5);
+            chartArea6.Name = "ChartArea1";
+            this.chartStats_SSV.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chartStats_SSV.Legends.Add(legend6);
             this.chartStats_SSV.Location = new System.Drawing.Point(8, 3);
             this.chartStats_SSV.Name = "chartStats_SSV";
-            series5.ChartArea = "ChartArea1";
-            series5.IsVisibleInLegend = false;
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chartStats_SSV.Series.Add(series5);
+            series6.ChartArea = "ChartArea1";
+            series6.IsVisibleInLegend = false;
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chartStats_SSV.Series.Add(series6);
             this.chartStats_SSV.Size = new System.Drawing.Size(475, 327);
             this.chartStats_SSV.TabIndex = 0;
             this.chartStats_SSV.Text = "chart1";
